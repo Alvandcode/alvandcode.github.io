@@ -46,24 +46,34 @@
     (function loop(){gx+=(tx-gx)*.08;gy+=(ty-gy)*.08;glow.style.left=gx+'px';glow.style.top=gy+'px';requestAnimationFrame(loop);})();
   }
 
-  // copy buttons
+  // copy buttons (language-aware)
+  function tr(k){ return (window.__t ? window.__t(k) : "") || ""; }
   document.querySelectorAll('.cp').forEach(function(b){b.addEventListener('click',function(){
-    var code=b.parentElement;var t=code.innerText.replace('کپی','').trim();
-    if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){b.textContent='✓ شد!';setTimeout(function(){b.textContent='کپی';},1400);});}
+    var code=b.parentElement,clone=code.cloneNode(true),btn=clone.querySelector('.cp');
+    if(btn) btn.remove();
+    var txt=(clone.innerText||clone.textContent||"").trim();
+    if(navigator.clipboard){navigator.clipboard.writeText(txt).then(function(){
+      b.textContent=tr('common.copied')||'✓';setTimeout(function(){b.textContent=tr('common.copy')||'';},1400);});}
   });});
+  window.addEventListener('langchange',function(){
+    document.querySelectorAll('.cp').forEach(function(b){b.textContent=tr('common.copy');});
+  });
 
-  // typing effect
+  // typing effect (per-language words)
   var ty=document.getElementById('typing');
   if(ty){
-    var words=['ابزارهای امنیتی','راه‌حل‌های شبکه','پردازش تصویر و OCR','اپ‌های اندروید','سرویس‌های بک‌اند'];
-    var wi=0,ci=0,del=false;
-    (function type(){
-      var w=words[wi];
+    var wi=0,ci=0,del=false,runId=0;
+    function words(){ return (window.TYPING_WORDS && window.TYPING_WORDS.length ? window.TYPING_WORDS : ["..."]); }
+    function type(myRun){
+      if(myRun!==runId) return;
+      var ws=words(),w=ws[wi%ws.length]||"";
       ty.textContent=w.slice(0,ci);
-      if(!del){ci++;if(ci>w.length){del=true;return setTimeout(type,1600);}}
-      else{ci--;if(ci===0){del=false;wi=(wi+1)%words.length;}}
-      setTimeout(type,del?34:70);
-    })();
+      if(!del){ci++;if(ci>w.length){del=true;return void setTimeout(function(){type(myRun);},1600);}}
+      else{ci--;if(ci===0){del=false;wi=(wi+1)%ws.length;}}
+      setTimeout(function(){type(myRun);},del?34:70);
+    }
+    type(runId);
+    window.addEventListener('langchange',function(){ runId++;wi=0;ci=0;del=false;type(runId); });
   }
 
   // active nav

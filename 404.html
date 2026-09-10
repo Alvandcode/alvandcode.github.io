@@ -1,15 +1,60 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>پیدا نشد | الوند کد</title><link rel="stylesheet" href="assets/css/style.css"></head>
+<title>404 | الوند کد</title>
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme.css">
+</head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div>
+<header id="siteHeader"><nav class="nav">
+<a class="logo" href="index.html"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+</div>
+</nav></header>
 <div class="wrap" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px">
 <div style="font-size:6rem;font-weight:900" class="grad">404</div>
-<h1>این صفحه گم شد! 🛸</h1>
-<p style="color:var(--mut)">ولی ۹ پروژه خفن منتظرتن…</p>
-<div style="display:flex;gap:12px"><a class="btn btn-p" href="index.html">🏠 خانه</a><a class="btn btn-g" href="index.html#projects">🚀 پروژه‌ها</a></div>
+<h1 id="t404t">این صفحه گم شد! 🛸</h1>
+<p style="color:var(--mut)" id="t404s">ولی ۹ پروژه خفن منتظرتن…</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center"><a class="btn btn-p" href="index.html" id="t404h">🏠 خانه</a><a class="btn btn-g" href="index.html#projects" id="t404p">🚀 پروژه‌ها</a></div>
 </div>
+<script>
+window.T404 = {
+fa: ["این صفحه گم شد! 🛸", "ولی ۹ پروژه خفن منتظرتن…", "🏠 خانه", "🚀 پروژه‌ها"],
+ar: ["!هذه الصفحة ضائعة 🛸", "لكن 9 مشاريع رائعة بانتظارك…", "🏠 الرئيسية", "🚀 المشاريع"],
+ur: ["یہ پیج گم ہو گیا! 🛸", "لیکن 9 شاندار پراجیکٹس منتظر ہیں…", "🏠 ہوم", "🚀 پراجیکٹس"],
+hi: ["यह पेज खो गया! 🛸", "लेकिन 9 शानदार प्रोजेक्ट्स आपका इंतज़ार कर रहे हैं…", "🏠 होम", "🚀 प्रोजेक्ट्स"],
+es: ["¡Esta página se perdió! 🛸", "Pero 9 proyectos geniales te esperan…", "🏠 Inicio", "🚀 Proyectos"],
+fr: ["Page perdue ! 🛸", "Mais 9 projets géniaux vous attendent…", "🏠 Accueil", "🚀 Projets"],
+pt: ["Página perdida! 🛸", "Mas 9 projetos incríveis esperam por você…", "🏠 Início", "🚀 Projetos"],
+de: ["Seite verloren! 🛸", "Aber 9 coole Projekte warten auf dich…", "🏠 Start", "🚀 Projekte"],
+it: ["Pagina persa! 🛸", "Ma 9 progetti fantastici ti aspettano…", "🏠 Home", "🚀 Progetti"],
+tr: ["Sayfa kayboldu! 🛸", "Ama 9 harika proje seni bekliyor…", "🏠 Ana Sayfa", "🚀 Projeler"],
+ru: ["Страница потерялась! 🛸", "Но 9 крутых проектов ждут тебя…", "🏠 Главная", "🚀 Проекты"],
+id: ["Halaman hilang! 🛸", "Tapi 9 proyek keren menunggumu…", "🏠 Beranda", "🚀 Proyek"],
+vi: ["Trang bị lạc! 🛸", "Nhưng 9 dự án tuyệt vời đang chờ bạn…", "🏠 Trang chủ", "🚀 Dự án"],
+ja: ["ページが迷子! 🛸", "でも素敵な9プロジェクトが待ってます…", "🏠 ホーム", "🚀 プロジェクト"],
+ko: ["페이지를 잃어버렸어요! 🛸", "하지만 멋진 9개 프로젝트가 기다려요…", "🏠 홈", "🚀 프로젝트"]
+};
+function paint404(){
+  var l = document.documentElement.getAttribute("data-lang") || "fa";
+  var s = window.T404[l] || window.T404.fa;
+  document.getElementById("t404t").textContent = s[0];
+  document.getElementById("t404s").textContent = s[1];
+  document.getElementById("t404h").textContent = s[2];
+  document.getElementById("t404p").textContent = s[3];
+}
+window.addEventListener("langchange", paint404);
+window.addEventListener("DOMContentLoaded", function(){ setTimeout(paint404, 50); });
+</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="assets/js/three-hero.js"></script><script src="assets/js/main.js"></script>
+<script src="assets/js/i18n1.js"></script>
+<script src="assets/js/i18n2.js"></script>
+<script src="assets/js/i18n3.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/three-hero.js"></script>
+<script src="assets/js/main.js"></script>
 </body></html>

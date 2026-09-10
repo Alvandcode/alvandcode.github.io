@@ -1,56 +1,67 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>پاک‌کننده متادیتا | الوند کد</title>
 <meta name="description" content="حذف کامل EXIF و GPS از تصاویر با پردازش گروهی، واترمارک و API.">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/theme.css">
 <style>:root{--accent:#10b981;--accent2:#84cc16}</style>
 </head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
 <header id="siteHeader"><nav class="nav">
-<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
-<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
-<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/image-metadata-cleaner" target="_blank">★ گیت‌هاب پروژه</a>
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home" data-i18n="common.nav_home">خانه</a><a href="../index.html#projects" class="active" data-i18n="common.nav_projects">پروژه‌ها</a><a href="../index.html#about" data-i18n="common.nav_about">درباره</a><a href="../index.html#contact" data-i18n="common.nav_contact">تماس</a></div>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/image-metadata-cleaner" target="_blank" data-i18n="common.gh_proj">★ گیت‌هاب پروژه</a>
+</div>
 </nav></header>
 <div class="wrap">
-<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex" data-i18n="common.back">→ بازگشت به همه پروژه‌ها</a>
 <div class="proj-hero"><div>
 <div class="proj-icon">🧹</div>
-<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">پاک‌کننده <span class="grad">متادیتای عکس</span></h1>
-<p class="sub">قبل از انتشار عکس در اینترنت، ردپای خودت را پاک کن: حذف ۱۰۰٪ EXIF، GPS، مدل دوربین و تاریخ — با پردازش گروهی صدها فایل، تغییر اندازه، واترمارک و API تحت وب.</p>
-<div class="meta"><span class="pill hot">★ 3 استار</span><span class="pill">Python</span><span class="pill">JPG / PNG / WebP</span><span class="pill">Flask + Docker</span></div>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/image-metadata-cleaner" target="_blank">⬇ دریافت از گیت‌هاب</a></div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px"><span data-i18n="p.meta.ta">پاک‌کننده</span> <span class="grad" data-i18n="p.meta.tb">متادیتای عکس</span></h1>
+<p class="sub" data-i18n="p.meta.sub">قبل از انتشار عکس در اینترنت، ردپای خودت را پاک کن...</p>
+<div class="meta"><span class="pill hot" data-i18n="p.meta.hot">★ 3 استار</span><span class="pill">Python</span><span class="pill">JPG / PNG / WebP</span><span class="pill">Flask + Docker</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/image-metadata-cleaner" target="_blank" data-i18n="p.meta.dl">⬇ دریافت از گیت‌هاب</a></div>
 </div>
 <div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">before / after</span></div>
 <div class="shot-body"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;font-size:.8rem">
-<div style="background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:14px;padding:16px">❌ قبل<br><span style="color:var(--mut)">📍 GPS: 35.7, 51.4<br>📷 Canon EOS<br>📅 2024-01-02<br>👤 Author</span></div>
-<div style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);border-radius:14px;padding:16px">✅ بعد<br><span style="color:var(--mut)">GPS: حذف شد<br>دوربین: حذف شد<br>تاریخ: حذف شد<br>نویسنده: حذف شد</span></div>
+<div style="background:rgba(248,113,113,.1);border:1px solid rgba(248,113,113,.3);border-radius:14px;padding:16px">❌ GPS / Camera / Date</div>
+<div style="background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.3);border-radius:14px;padding:16px">✅ EXIF removed</div>
 </div></div></div></div>
-<section style="padding-top:20px"><h2 class="reveal">✨ قابلیت‌ها</h2>
+<section style="padding-top:20px"><h2 class="reveal" data-i18n="common.feat">✨ قابلیت‌ها</h2>
 <div class="feat-grid">
-<div class="feat reveal"><div class="e">🔒</div><b>حذف کامل</b><p style="color:var(--mut);font-size:.87rem">EXIF + GPS + اطلاعات پنهان، بدون افت کیفیت.</p></div>
-<div class="feat reveal"><div class="e">📚</div><b>پردازش گروهی</b><p style="color:var(--mut);font-size:.87rem">تمیزکاری صدها عکس با یک دستور.</p></div>
-<div class="feat reveal"><div class="e">🖼️</div><b>Resize و Watermark</b><p style="color:var(--mut);font-size:.87rem">تغییر اندازه و افزودن واترمارک همزمان.</p></div>
-<div class="feat reveal"><div class="e">⌨️</div><b>CLI ساده</b><p style="color:var(--mut);font-size:.87rem">رابط خط فرمان قدرتمند با گزینه analyze.</p></div>
-<div class="feat reveal"><div class="e">🌐</div><b>API فلاسک</b><p style="color:var(--mut);font-size:.87rem">اتصال به بات‌ها و پروژه‌های وب.</p></div>
-<div class="feat reveal"><div class="e">🐳</div><b>داکر</b><p style="color:var(--mut);font-size:.87rem">اجرای ایزوله بدون دردسر وابستگی.</p></div>
+<div class="feat reveal"><div class="e">🔒</div><b data-i18n="p.meta.f1t">حذف کامل</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.meta.f1d">...</p></div>
+<div class="feat reveal"><div class="e">📚</div><b data-i18n="p.meta.f2t">پردازش گروهی</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.meta.f2d">...</p></div>
+<div class="feat reveal"><div class="e">🖼️</div><b data-i18n="p.meta.f3t">Resize و Watermark</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.meta.f3d">...</p></div>
+<div class="feat reveal"><div class="e">⌨️</div><b data-i18n="p.meta.f4t">CLI ساده</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.meta.f4d">...</p></div>
+<div class="feat reveal"><div class="e">🌐</div><b data-i18n="p.meta.f5t">API فلاسک</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.meta.f5d">...</p></div>
+<div class="feat reveal"><div class="e">🐳</div><b data-i18n="p.meta.f6t">داکر</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.meta.f6d">...</p></div>
 </div></section>
-<section style="padding-top:10px"><h2 class="reveal">🚀 استفاده</h2>
+<section style="padding-top:10px"><h2 class="reveal" data-i18n="common.inst">🚀 استفاده</h2>
 <div class="steps">
-<div class="step reveal"><b>تک‌فایل و گروهی</b><div class="code"><button class="cp">کپی</button>python -m cli.main input.jpg -o output_clean.jpg<br>python -m cli.main "photos/*.jpg" -o cleaned/</div></div>
-<div class="step reveal"><b>پیشرفته</b><div class="code"><button class="cp">کپی</button>python -m cli.main photo.jpg --resize 1200x800 --watermark "© AlvandCode"<br>python -m cli.main photo.jpg --analyze</div></div>
-<div class="step reveal"><b>API و داکر</b><div class="code"><button class="cp">کپی</button>python -m api.server<br><span class="cmt"># در ترمینال دیگر:</span><br>curl -X POST -F "image=@photo.jpg" http://localhost:5000/clean --output cleaned.jpg</div></div>
+<div class="step reveal"><b data-i18n="p.meta.s1t">تک‌فایل و گروهی</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button>python -m cli.main input.jpg -o output_clean.jpg<br>python -m cli.main "photos/*.jpg" -o cleaned/</div></div>
+<div class="step reveal"><b data-i18n="p.meta.s2t">پیشرفته</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button>python -m cli.main photo.jpg --resize 1200x800 --watermark "© AlvandCode"<br>python -m cli.main photo.jpg --analyze</div></div>
+<div class="step reveal"><b data-i18n="p.meta.s3t">API و داکر</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button>python -m api.server<br><span class="cmt"># POST image:</span><br>curl -X POST -F "image=@photo.jpg" http://localhost:5000/clean --output cleaned.jpg</div></div>
 </div></section>
 <div class="nextprev">
-<a class="np" href="ocr-stt-tool.html"><small>← پروژه قبلی</small><b>🔍 OCR + گفتار</b></a>
-<a class="np" style="text-align:left" href="receiptvision-core.html"><small>پروژه بعدی →</small><b>🧾 رسیت‌ویژن</b></a>
+<a class="np" href="ocr-stt-tool.html"><small data-i18n="common.prev">← پروژه قبلی</small><b data-i18n="home.c_ocr_t">OCR + گفتار</b></a>
+<a class="np" style="text-align:left" href="receiptvision-core.html"><small data-i18n="common.next">پروژه بعدی →</small><b data-i18n="home.c_recv_t">رسیت‌ویژن</b></a>
 </div></div>
 <footer style="margin-top:60px"><div class="wrap f-row">
-<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
-<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/image-metadata-cleaner" target="_blank">گیت‌هاب پروژه</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b data-i18n="home.f_name">الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/image-metadata-cleaner" target="_blank">GitHub</a><a href="https://t.me/a_c_official" target="_blank">Telegram</a></div>
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n1.js"></script>
+<script src="../assets/js/i18n2.js"></script>
+<script src="../assets/js/i18n3.js"></script>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/three-hero.js"></script>
+<script src="../assets/js/main.js"></script>
 </body></html>

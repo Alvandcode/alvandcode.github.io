@@ -1,0 +1,70 @@
+/* Alvandcode — light theme + language/theme controls + sunrise/sunset veil */
+.nav-tools{display:flex;gap:10px;align-items:center}
+.lang-sel{background:rgba(255,255,255,.06);border:1px solid var(--bd);color:var(--txt);border-radius:12px;padding:9px 10px;font-family:inherit;font-size:.8rem;font-weight:700;cursor:pointer;max-width:148px;transition:.3s}
+.lang-sel:hover{border-color:var(--p)}
+.lang-sel option{color:#15172a;background:#fff}
+.theme-btn{background:rgba(255,255,255,.06);border:1px solid var(--bd);border-radius:12px;padding:7px 12px;font-size:1.05rem;cursor:pointer;transition:.3s;line-height:1.4}
+.theme-btn:hover{transform:translateY(-2px) rotate(14deg);border-color:var(--p)}
+
+/* smooth color crossfade while theme is switching */
+html.theming,html.theming *,html.theming *::before,html.theming *::after{transition:background-color .7s ease,color .7s ease,border-color .7s ease,box-shadow .7s ease,fill .7s ease,stroke .7s ease !important}
+
+/* ===== sunrise / sunset veil ===== */
+#veil{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:0;transition:opacity .45s ease;overflow:hidden}
+#veil.show{opacity:1}
+#veil .veil-sun{position:absolute;left:50%;width:150px;height:150px;margin-left:-75px;border-radius:50%;
+  background:radial-gradient(circle,#fff8e7 0%,#ffd76e 35%,#ff9a3c 65%,rgba(255,154,60,0) 72%);
+  box-shadow:0 0 120px 60px rgba(255,170,80,.55)}
+#veil[data-mode="rise"]{background:linear-gradient(180deg,#0a0f2e 0%,#2c2560 42%,#b45a8d 68%,#ff9a5c 85%,#ffd9a0 100%)}
+#veil[data-mode="rise"] .veil-sun{bottom:-170px;animation:veilRise 1.5s ease forwards}
+@keyframes veilRise{to{transform:translateY(-62vh)}}
+#veil[data-mode="set"]{background:linear-gradient(180deg,#1c1440 0%,#7a3b6e 45%,#ff8c42 72%,#3a2358 100%)}
+#veil[data-mode="set"] .veil-sun{top:-170px;animation:veilSet 1.5s ease forwards}
+@keyframes veilSet{to{transform:translateY(62vh)}}
+
+/* ===== light theme ===== */
+html[data-theme="light"]{--bg:#edf0f8;--bg2:#e2e6f3;--card:#ffffff;--bd:rgba(23,26,48,.14);--txt:#181b31;--mut:#5d6179;color-scheme:light}
+html[data-theme="light"] body{background:var(--bg);color:var(--txt)}
+html[data-theme="light"] .bg-grid{background-image:linear-gradient(rgba(23,26,48,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(23,26,48,.07) 1px,transparent 1px)}
+html[data-theme="light"] .orb{opacity:.2}
+html[data-theme="light"] #bg3d{opacity:.35}
+html[data-theme="light"] #glow{background:radial-gradient(circle,rgba(99,102,241,.1),transparent 65%)}
+html[data-theme="light"] .nav{background:rgba(255,255,255,.78)}
+html[data-theme="light"] header.scrolled .nav{background:rgba(255,255,255,.94);box-shadow:0 12px 44px rgba(99,102,241,.16)}
+html[data-theme="light"] .links{color:#4a4f6e}
+html[data-theme="light"] .links a:hover,html[data-theme="light"] .links a.active{color:#0e1130}
+html[data-theme="light"] .btn-g{background:rgba(255,255,255,.75);color:var(--txt)}
+html[data-theme="light"] .grad{background:linear-gradient(120deg,#4f46e5,#a855f7 45%,#0891b2);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme="light"] #typing{color:#4f46e5 !important}
+html[data-theme="light"] .stat,html[data-theme="light"] .pcard,html[data-theme="light"] .skill,
+html[data-theme="light"] .tl,html[data-theme="light"] .c-card,html[data-theme="light"] .about-card,
+html[data-theme="light"] .feat,html[data-theme="light"] .step,html[data-theme="light"] .np{background:#fff}
+html[data-theme="light"] .stat b{background:linear-gradient(180deg,#23264d,#6366f1);-webkit-background-clip:text;background-clip:text;color:transparent}
+html[data-theme="light"] .tag{background:rgba(99,102,241,.09);color:#3c4090;border-color:rgba(99,102,241,.22)}
+html[data-theme="light"] .pill{background:rgba(23,26,48,.06)}
+html[data-theme="light"] .eyebrow{color:#4f46e5}
+html[data-theme="light"] .marquee{background:#fff}
+html[data-theme="light"] .marquee div{color:#6a6f8c}
+html[data-theme="light"] .more{color:#4f46e5}
+html[data-theme="light"] .open{color:#4f46e5}
+html[data-theme="light"] .pcard:hover .open{color:#7c3aed}
+html[data-theme="light"] .gh:hover{color:#0e1130}
+html[data-theme="light"] .back:hover{color:#0e1130}
+html[data-theme="light"] .contact-box{background:linear-gradient(160deg,rgba(99,102,241,.13),rgba(168,85,247,.09))}
+html[data-theme="light"] .c-card{background:#fff}
+html[data-theme="light"] footer{background:#e4e8f4}
+html[data-theme="light"] section#about{background:#e0e5f2 !important}
+html[data-theme="light"] .lang-sel,html[data-theme="light"] .theme-btn{background:#fff}
+html[data-theme="light"] .mobile-menu{background:rgba(255,255,255,.97)}
+html[data-theme="light"] .burger{color:var(--txt)}
+html[data-theme="light"] .mouse{border-color:rgba(23,26,48,.4)}
+html[data-theme="light"] .float-chip{background:rgba(20,20,38,.92);color:#fff}
+/* screens (terminal / preview / code) stay dark in both themes */
+html[data-theme="light"] .cube-card,html[data-theme="light"] .shot,html[data-theme="light"] .code{color:#e8eaf2}
+
+/* ===== LTR languages ===== */
+html[dir="ltr"] .step{padding-right:18px;padding-left:64px}
+html[dir="ltr"] .step::before{right:auto;left:16px}
+html[dir="ltr"] .links a::after{right:auto;left:0}
+html[dir="ltr"] .term-body{text-align:left}
+@media(max-width:680px){.lang-sel{max-width:118px}.nav-tools .btn-p{display:none}}

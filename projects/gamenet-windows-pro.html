@@ -1,58 +1,69 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>گیم‌نت پرو ویندوز | الوند کد</title>
 <meta name="description" content="مدیریت کامل گیم‌نت روی ویندوز: تایمر، بوفه، کیف‌پول، فاکتور PDF، نمودار درآمد و کنترل از راه دور.">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/theme.css">
 <style>:root{--accent:#22c55e;--accent2:#06b6d4}</style>
 </head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
 <header id="siteHeader"><nav class="nav">
-<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
-<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
-<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/gamenet-windows-pro" target="_blank">★ گیت‌هاب پروژه</a>
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home" data-i18n="common.nav_home">خانه</a><a href="../index.html#projects" class="active" data-i18n="common.nav_projects">پروژه‌ها</a><a href="../index.html#about" data-i18n="common.nav_about">درباره</a><a href="../index.html#contact" data-i18n="common.nav_contact">تماس</a></div>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/gamenet-windows-pro" target="_blank" data-i18n="common.gh_proj">★ گیت‌هاب پروژه</a>
+</div>
 </nav></header>
 <div class="wrap">
-<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex" data-i18n="common.back">→ بازگشت به همه پروژه‌ها</a>
 <div class="proj-hero"><div>
 <div class="proj-icon">🖥️</div>
-<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">گیم‌نت منیجر <span class="grad">پرو (ویندوز)</span></h1>
-<p class="sub">برنامه‌ای که اول برای گیم‌نت خودم نوشتم — حالا کامل‌ترین ابزار مدیریت گیم‌سنتر است: تایمر هوشمند، تعرفه ساعتی/دستگاهی، رزرو، بوفه با سود، کیف‌پول و بدهی، فاکتور PDF، نمودار درآمد و کنترل PC مشتری از راه دور. بدون اینترنت کار می‌کند.</p>
-<div class="meta"><span class="pill hot">💎 محصول ویژه</span><span class="pill">Electron + Node 20</span><span class="pill">آفلاین</span><span class="pill">۲۱ تم رنگی</span></div>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/gamenet-windows-pro/releases" target="_blank">⬇ دانلود Setup / Portable</a><a class="btn btn-g" href="../gamenet/">🛒 صفحه خرید لایسنس</a></div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px"><span data-i18n="p.gwin.ta">گیم‌نت منیجر</span> <span class="grad" data-i18n="p.gwin.tb">پرو (ویندوز)</span></h1>
+<p class="sub" data-i18n="p.gwin.sub">برنامه‌ای که اول برای گیم‌نت خودم نوشتم...</p>
+<div class="meta"><span class="pill hot" data-i18n="p.gwin.hot">💎 محصول ویژه</span><span class="pill">Electron + Node 20</span><span class="pill">Offline</span><span class="pill">21 themes</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/gamenet-windows-pro/releases" target="_blank" data-i18n="p.gwin.dl">⬇ دانلود Setup / Portable</a><a class="btn btn-g" href="../gamenet/" data-i18n="p.gwin.extra">🛒 صفحه خرید لایسنس</a></div>
 </div>
 <div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">dashboard — today</span></div>
 <div class="shot-body"><div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;text-align:center;font-size:.78rem">
-<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:14px">💰 امروز<br><b>۱٬۲۴۰٬۰۰۰</b></div>
-<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:14px">⏱️ ساعت بازی<br><b>۸۶ ساعت</b></div>
-<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:14px">🛒 بوفه<br><b>+۳۴۰٬۰۰۰</b></div>
-</div><div style="margin-top:12px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:12px 16px;font-size:.82rem">📊 نمودار هفتگی: ▂▄▅▇█▅▃ — رشد ۱۸٪ نسبت به هفته قبل</div></div></div></div>
-<section style="padding-top:20px"><h2 class="reveal">✨ چرا پرو؟</h2>
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:14px">💰<br><b>1,240,000</b></div>
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:14px">⏱️<br><b>86h</b></div>
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:14px">🛒<br><b>+340,000</b></div>
+</div><div style="margin-top:12px;background:rgba(34,197,94,.1);border:1px solid rgba(34,197,94,.3);border-radius:12px;padding:12px 16px;font-size:.82rem">📊 ▂▄▅▇█▅▃ +18%</div></div></div></div>
+<section style="padding-top:20px"><h2 class="reveal" data-i18n="common.feat">✨ چرا پرو؟</h2>
 <div class="feat-grid">
-<div class="feat reveal"><div class="e">⏱️</div><b>تایمر + هشدار</b><p style="color:var(--mut);font-size:.87rem">هشدار صوتی و چشمک پایان وقت هر سیستم.</p></div>
-<div class="feat reveal"><div class="e">🔄</div><b>دوطرفه پول↔زمان</b><p style="color:var(--mut);font-size:.87rem">مبلغ بده، دقیقه بگیر — یا برعکس، خودکار.</p></div>
-<div class="feat reveal"><div class="e">🏷️</div><b>تعرفه هوشمند</b><p style="color:var(--mut);font-size:.87rem">جداگانه برای PC / پلی‌استیشن / بیلیارد + تعرفه ساعتی شبانه.</p></div>
-<div class="feat reveal"><div class="e">🛒</div><b>بوفه کامل</b><p style="color:var(--mut);font-size:.87rem">موجودی، قیمت خرید/فروش و سود خودکار.</p></div>
-<div class="feat reveal"><div class="e">👛</div><b>کیف‌پول و تخفیف</b><p style="color:var(--mut);font-size:.87rem">شارژ، بدهی، رتبه مشتری و تخفیف تولد 🎂</p></div>
-<div class="feat reveal"><div class="e">🖥️</div><b>کنترل از راه دور</b><p style="color:var(--mut);font-size:.87rem">قفل خودکار، پیام روی مانیتور و خاموش‌کردن با ایجنت شبکه داخلی.</p></div>
+<div class="feat reveal"><div class="e">⏱️</div><b data-i18n="p.gwin.f1t">تایمر + هشدار</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.gwin.f1d">...</p></div>
+<div class="feat reveal"><div class="e">🔄</div><b data-i18n="p.gwin.f2t">دوطرفه پول↔زمان</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.gwin.f2d">...</p></div>
+<div class="feat reveal"><div class="e">🏷️</div><b data-i18n="p.gwin.f3t">تعرفه هوشمند</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.gwin.f3d">...</p></div>
+<div class="feat reveal"><div class="e">🛒</div><b data-i18n="p.gwin.f4t">بوفه کامل</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.gwin.f4d">...</p></div>
+<div class="feat reveal"><div class="e">👛</div><b data-i18n="p.gwin.f5t">کیف‌پول و تخفیف</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.gwin.f5d">...</p></div>
+<div class="feat reveal"><div class="e">🖥️</div><b data-i18n="p.gwin.f6t">کنترل از راه دور</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.gwin.f6d">...</p></div>
 </div></section>
-<section style="padding-top:10px"><h2 class="reveal">🚀 نصب</h2>
+<section style="padding-top:10px"><h2 class="reveal" data-i18n="common.inst">🚀 نصب</h2>
 <div class="steps">
-<div class="step reveal"><b>کاربر عادی: از Releases دانلود کن</b><br><span style="color:var(--mut)"><span class="ltr">Gamenet Manager Pro Setup.exe</span> را نصب کن یا نسخه Portable را بدون نصب اجرا کن.</span></div>
-<div class="step reveal"><b>توسعه‌دهنده: بیلد از سورس</b><div class="code"><button class="cp">کپی</button>npm ci<br>npm test<br>npm start<br>npm run dist:win</div></div>
+<div class="step reveal"><b data-i18n="p.gwin.s1t">کاربر عادی: از Releases دانلود کن</b><br><span style="color:var(--mut)" data-i18n="p.gwin.s1d">...</span></div>
+<div class="step reveal"><b data-i18n="p.gwin.s2t">توسعه‌دهنده: بیلد از سورس</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button>npm ci<br>npm test<br>npm start<br>npm run dist:win</div></div>
 </div>
-<p class="reveal" style="color:var(--mut);font-size:.88rem;margin-top:14px">💳 لایسنس ۳ کاربره + کاربر اضافه — جزئیات و خرید در <a style="color:#6ee7b7" href="../gamenet/">صفحه فروش گیم‌نت ←</a></p>
+<p class="reveal" style="color:var(--mut);font-size:.88rem;margin-top:14px" data-i18n="p.gwin.note">💳 لایسنس ۳ کاربره...</p>
 </section>
 <div class="nextprev">
-<a class="np" href="gamenet-manager.html"><small>← پروژه قبلی</small><b>🎮 نسخه اندروید</b></a>
-<a class="np" style="text-align:left" href="qand-app.html"><small>پروژه بعدی →</small><b>🍰 قنادی قند</b></a>
+<a class="np" href="gamenet-manager.html"><small data-i18n="common.prev">← پروژه قبلی</small><b data-i18n="home.c_gmob_t">نسخه اندروید</b></a>
+<a class="np" style="text-align:left" href="qand-app.html"><small data-i18n="common.next">پروژه بعدی →</small><b data-i18n="home.c_qand_t">قنادی قند</b></a>
 </div></div>
 <footer style="margin-top:60px"><div class="wrap f-row">
-<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
-<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/gamenet-windows-pro" target="_blank">گیت‌هاب پروژه</a><a href="../gamenet/">خرید</a></div>
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b data-i18n="home.f_name">الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/gamenet-windows-pro" target="_blank">GitHub</a><a href="../gamenet/" data-i18n="common.f_buy">خرید</a></div>
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n1.js"></script>
+<script src="../assets/js/i18n2.js"></script>
+<script src="../assets/js/i18n3.js"></script>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/three-hero.js"></script>
+<script src="../assets/js/main.js"></script>
 </body></html>

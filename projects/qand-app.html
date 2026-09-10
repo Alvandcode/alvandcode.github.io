@@ -1,54 +1,65 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>قنادی قند | الوند کد</title>
 <meta name="description" content="اپ فلاتری سفارش قنادی با سوپابیس: کیک، کوکی، پرداخت و پنل مدیر.">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/theme.css">
 <style>:root{--accent:#ec4899;--accent2:#f59e0b}</style>
 </head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
 <header id="siteHeader"><nav class="nav">
-<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
-<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
-<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/qand-app" target="_blank">★ گیت‌هاب پروژه</a>
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home" data-i18n="common.nav_home">خانه</a><a href="../index.html#projects" class="active" data-i18n="common.nav_projects">پروژه‌ها</a><a href="../index.html#about" data-i18n="common.nav_about">درباره</a><a href="../index.html#contact" data-i18n="common.nav_contact">تماس</a></div>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/qand-app" target="_blank" data-i18n="common.gh_proj">★ گیت‌هاب پروژه</a>
+</div>
 </nav></header>
 <div class="wrap">
-<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex" data-i18n="common.back">→ بازگشت به همه پروژه‌ها</a>
 <div class="proj-hero"><div>
 <div class="proj-icon">🍰</div>
-<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">قنادی <span class="grad">قند</span></h1>
-<p class="sub">اپ اندروید (۷ تا ۱۷) سفارش قنادی با Flutter و Supabase: انتخاب دسته (کیک خونگی / کوکی / تولد)، فرم سفارش با تاریخ شمسی، اعلام مبلغ توسط مدیر، پرداخت کارت‌به‌کارت و آپلود فیش.</p>
-<div class="meta"><span class="pill hot">🆕 جدید</span><span class="pill">Flutter + Dart</span><span class="pill">Supabase</span><span class="pill">minSdk 24</span></div>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/qand-app" target="_blank">⬇ دریافت APK از Actions</a></div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px"><span data-i18n="p.qand.ta">قنادی</span> <span class="grad" data-i18n="p.qand.tb">قند</span></h1>
+<p class="sub" data-i18n="p.qand.sub">اپ اندروید (۷ تا ۱۷) سفارش قنادی...</p>
+<div class="meta"><span class="pill hot" data-i18n="p.qand.hot">🆕 جدید</span><span class="pill">Flutter + Dart</span><span class="pill">Supabase</span><span class="pill">minSdk 24</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/qand-app" target="_blank" data-i18n="p.qand.dl">⬇ دریافت APK از Actions</a></div>
 </div>
 <div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">order flow</span></div>
 <div class="shot-body"><div style="display:flex;gap:8px;align-items:center;font-size:.76rem;text-align:center">
-<div style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:12px">۱. دسته<br>🍰</div><span>←</span>
-<div style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:12px">۲. سفارش<br>📝</div><span>←</span>
-<div style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:12px">۳. پرداخت<br>💳</div><span>←</span>
-<div style="flex:1;background:rgba(236,72,153,.14);border:1px solid rgba(236,72,153,.4);border-radius:12px;padding:12px">۴. تحویل<br>🎁</div>
-</div><p style="color:var(--mut);font-size:.8rem;margin-top:12px">بدون بک‌اند هم با حافظه لوکال (دمو) کار می‌کند؛ با اتصال سوپابیس کامل می‌شود.</p></div></div></div>
-<section style="padding-top:20px"><h2 class="reveal">✨ فلو سفارش</h2>
+<div style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:12px">1. 🍰</div><span>←</span>
+<div style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:12px">2. 📝</div><span>←</span>
+<div style="flex:1;background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:12px;padding:12px">3. 💳</div><span>←</span>
+<div style="flex:1;background:rgba(236,72,153,.14);border:1px solid rgba(236,72,153,.4);border-radius:12px;padding:12px">4. 🎁</div>
+</div></div></div></div>
+<section style="padding-top:20px"><h2 class="reveal" data-i18n="common.feat">✨ فلو سفارش</h2>
 <div class="steps">
-<div class="step reveal"><b>انتخاب دسته و جزئیات</b><br><span style="color:var(--mut)">کیک خونگی / کوکی / بیسکوییت / تولد + مواد تشکیل‌دهنده.</span></div>
-<div class="step reveal"><b>فرم سفارش فارسی</b><br><span style="color:var(--mut)">تعداد، نفرات، نام، موبایل، آدرس دقیق و تاریخ شمسی.</span></div>
-<div class="step reveal"><b>پرداخت</b><br><span style="color:var(--mut)">اعلام مبلغ توسط مدیر → کارت‌به‌کارت (شماره کارت قابل تغییر از پنل) + زرین‌پال → آپلود فیش → تایید مدیر.</span></div>
-<div class="step reveal"><b>پنل مدیر</b><br><span style="color:var(--mut)">ورود با <span class="ltr">admin / 1234</span> — تغییر وضعیت، ثبت مبلغ و کارت، تایید فیش و تنظیمات.</span></div>
+<div class="step reveal"><b data-i18n="p.qand.s1t">انتخاب دسته و جزئیات</b><br><span style="color:var(--mut)" data-i18n="p.qand.s1d">...</span></div>
+<div class="step reveal"><b data-i18n="p.qand.s2t">فرم سفارش فارسی</b><br><span style="color:var(--mut)" data-i18n="p.qand.s2d">...</span></div>
+<div class="step reveal"><b data-i18n="p.qand.s3t">پرداخت</b><br><span style="color:var(--mut)" data-i18n="p.qand.s3d">...</span></div>
+<div class="step reveal"><b data-i18n="p.qand.s4t">پنل مدیر</b><br><span style="color:var(--mut)" data-i18n="p.qand.s4d">...</span></div>
 </div></section>
-<section style="padding-top:10px"><h2 class="reveal">🚀 اجرا و بیلد</h2>
-<div class="code"><button class="cp">کپی</button>flutter pub get<br>flutter run<br><span class="cmt"># release:</span> flutter build apk --release</div>
-<div class="code"><button class="cp">کپی</button><span class="cmt"># supabase (پیشنهادی): اجرای schema.sql + ساخت باکت‌های product-images و receipts، بعد:</span><br>flutter run --dart-define=SUPABASE_URL=https://xyz.supabase.co --dart-define=SUPABASE_ANON_KEY=KEY</div>
+<section style="padding-top:10px"><h2 class="reveal" data-i18n="common.inst">🚀 اجرا و بیلد</h2>
+<div class="code"><button class="cp" data-i18n="common.copy">کپی</button>flutter pub get<br>flutter run<br><span class="cmt"># release:</span> flutter build apk --release</div>
+<div class="code"><button class="cp" data-i18n="common.copy">کپی</button><span class="cmt"># supabase:</span><br>flutter run --dart-define=SUPABASE_URL=https://xyz.supabase.co --dart-define=SUPABASE_ANON_KEY=KEY</div>
 </section>
 <div class="nextprev">
-<a class="np" href="gamenet-windows-pro.html"><small>← پروژه قبلی</small><b>🖥️ گیم‌نت پرو</b></a>
-<a class="np" style="text-align:left" href="android-security-scanner.html"><small>پروژه بعدی →</small><b>🛡️ اسکنر اندروید</b></a>
+<a class="np" href="gamenet-windows-pro.html"><small data-i18n="common.prev">← پروژه قبلی</small><b data-i18n="home.c_gwin_t">گیم‌نت پرو</b></a>
+<a class="np" style="text-align:left" href="android-security-scanner.html"><small data-i18n="common.next">پروژه بعدی →</small><b data-i18n="home.c_android_t">اسکنر اندروید</b></a>
 </div></div>
 <footer style="margin-top:60px"><div class="wrap f-row">
-<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
-<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/qand-app" target="_blank">گیت‌هاب پروژه</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b data-i18n="home.f_name">الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/qand-app" target="_blank">GitHub</a><a href="https://t.me/a_c_official" target="_blank">Telegram</a></div>
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n1.js"></script>
+<script src="../assets/js/i18n2.js"></script>
+<script src="../assets/js/i18n3.js"></script>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/three-hero.js"></script>
+<script src="../assets/js/main.js"></script>
 </body></html>

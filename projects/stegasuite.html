@@ -1,54 +1,65 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>استگا سوئیت | الوند کد</title>
 <meta name="description" content="اپ اندرویدی مخفی‌سازی فایل در عکس PNG با AES-256 و Jetpack Compose.">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/theme.css">
 <style>:root{--accent:#a855f7;--accent2:#ec4899}</style>
 </head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
 <header id="siteHeader"><nav class="nav">
-<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
-<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
-<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/StegaSuite" target="_blank">★ گیت‌هاب پروژه</a>
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home" data-i18n="common.nav_home">خانه</a><a href="../index.html#projects" class="active" data-i18n="common.nav_projects">پروژه‌ها</a><a href="../index.html#about" data-i18n="common.nav_about">درباره</a><a href="../index.html#contact" data-i18n="common.nav_contact">تماس</a></div>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/StegaSuite" target="_blank" data-i18n="common.gh_proj">★ گیت‌هاب پروژه</a>
+</div>
 </nav></header>
 <div class="wrap">
-<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex" data-i18n="common.back">→ بازگشت به همه پروژه‌ها</a>
 <div class="proj-hero"><div>
 <div class="proj-icon">🕵️</div>
-<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">استگا سوئیت <span class="grad">اندروید</span></h1>
-<p class="sub">هر فایلی را داخل یک عکس PNG مخفی کن — با رمزنگاری اختیاری AES-256-GCM و مشتق‌سازی کلید PBKDF2. نیتیو با Kotlin و Jetpack Compose، کاملا آفلاین و بدون دسترسی گسترده به حافظه.</p>
-<div class="meta"><span class="pill hot">★ 3 استار</span><span class="pill">Kotlin</span><span class="pill">Jetpack Compose</span><span class="pill">AES-256-GCM</span></div>
-<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/StegaSuite" target="_blank">⬇ دریافت از گیت‌هاب</a></div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px"><span data-i18n="p.steg.ta">استگا سوئیت</span> <span class="grad" data-i18n="p.steg.tb">اندروید</span></h1>
+<p class="sub" data-i18n="p.steg.sub">هر فایلی را داخل یک عکس PNG مخفی کن...</p>
+<div class="meta"><span class="pill hot" data-i18n="p.steg.hot">★ 3 استار</span><span class="pill">Kotlin</span><span class="pill">Jetpack Compose</span><span class="pill">AES-256-GCM</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/StegaSuite" target="_blank" data-i18n="p.steg.dl">⬇ دریافت از گیت‌هاب</a></div>
 </div>
 <div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">StegaSuite — app preview</span></div>
 <div class="shot-body"><div style="display:grid;grid-template-columns:1fr 1fr;gap:12px;text-align:center;font-size:.82rem">
-<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:14px;padding:18px">🖼️ عکس حامل<br><b>PNG</b><br><small style="color:var(--mut)">ظرفیت: ~2.1MB</small></div>
-<div style="background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.4);border-radius:14px;padding:18px">🔐 فایل مخفی<br><b>AES-256 ✓</b><br><small style="color:var(--mut)">استخراج با رمز</small></div>
-</div><p style="color:var(--mut);font-size:.8rem;margin-top:12px">خروجی همیشه PNG است چون JPEG با فشرده‌سازی lossy داده مخفی را نابود می‌کند.</p></div></div></div>
-<section style="padding-top:20px"><h2 class="reveal">✨ قابلیت‌ها</h2>
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:14px;padding:18px">🖼️ carrier<br><b>PNG</b></div>
+<div style="background:rgba(168,85,247,.12);border:1px solid rgba(168,85,247,.4);border-radius:14px;padding:18px">🔐 hidden file<br><b>AES-256 ✓</b></div>
+</div></div></div></div>
+<section style="padding-top:20px"><h2 class="reveal" data-i18n="common.feat">✨ قابلیت‌ها</h2>
 <div class="feat-grid">
-<div class="feat reveal"><div class="e">📥</div><b>مخفی‌سازی</b><p style="color:var(--mut);font-size:.87rem">جاسازی هر نوع فایل داخل عکس با روش LSB.</p></div>
-<div class="feat reveal"><div class="e">📤</div><b>استخراج</b><p style="color:var(--mut);font-size:.87rem">بازیابی فایل اصلی بدون افت کیفیت.</p></div>
-<div class="feat reveal"><div class="e">🔐</div><b>AES-256-GCM</b><p style="color:var(--mut);font-size:.87rem">رمزنگاری اختیاری + کلید PBKDF2 از رمز عبور.</p></div>
-<div class="feat reveal"><div class="e">📏</div><b>تخمین ظرفیت</b><p style="color:var(--mut);font-size:.87rem">محاسبه فضای قابل مخفی‌سازی قبل از عملیات.</p></div>
-<div class="feat reveal"><div class="e">📁</div><b>SAF</b><p style="color:var(--mut);font-size:.87rem">بدون نیاز به دسترسی broad — با Storage Access Framework.</p></div>
-<div class="feat reveal"><div class="e">🤖</div><b>بیلد خودکار APK</b><p style="color:var(--mut);font-size:.87rem">گیت‌هاب اکشن روی هر push خروجی debug می‌سازد.</p></div>
+<div class="feat reveal"><div class="e">📥</div><b data-i18n="p.steg.f1t">مخفی‌سازی</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.steg.f1d">...</p></div>
+<div class="feat reveal"><div class="e">📤</div><b data-i18n="p.steg.f2t">استخراج</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.steg.f2d">...</p></div>
+<div class="feat reveal"><div class="e">🔐</div><b data-i18n="p.steg.f3t">AES-256-GCM</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.steg.f3d">...</p></div>
+<div class="feat reveal"><div class="e">📏</div><b data-i18n="p.steg.f4t">تخمین ظرفیت</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.steg.f4d">...</p></div>
+<div class="feat reveal"><div class="e">📁</div><b data-i18n="p.steg.f5t">SAF</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.steg.f5d">...</p></div>
+<div class="feat reveal"><div class="e">🤖</div><b data-i18n="p.steg.f6t">بیلد خودکار APK</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.steg.f6d">...</p></div>
 </div></section>
-<section style="padding-top:10px"><h2 class="reveal">🚀 بیلد در اندروید استودیو</h2>
+<section style="padding-top:10px"><h2 class="reveal" data-i18n="common.inst">🚀 بیلد در اندروید استودیو</h2>
 <div class="steps">
-<div class="step reveal"><b>۱ تا ۵: باز کردن، Sync گریدل، اتصال گوشی، Run</b><div class="code"><button class="cp">کپی</button><span class="cmt"># خروجی Artifacts در:</span><br>GitHub Actions → Artifacts → StegaSuite-debug-apk</div></div>
+<div class="step reveal"><b data-i18n="p.steg.s1t">۱ تا ۵: باز کردن، Sync گریدل، اتصال گوشی، Run</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button><span class="cmt"># Artifacts:</span><br>GitHub Actions → Artifacts → StegaSuite-debug-apk</div></div>
 </div></section>
 <div class="nextprev">
-<a class="np" href="receiptvision-core.html"><small>← پروژه قبلی</small><b>🧾 رسیت‌ویژن</b></a>
-<a class="np" style="text-align:left" href="gamenet-manager.html"><small>پروژه بعدی →</small><b>🎮 گیم‌نت منیجر</b></a>
+<a class="np" href="receiptvision-core.html"><small data-i18n="common.prev">← پروژه قبلی</small><b data-i18n="home.c_recv_t">رسیت‌ویژن</b></a>
+<a class="np" style="text-align:left" href="gamenet-manager.html"><small data-i18n="common.next">پروژه بعدی →</small><b data-i18n="home.c_gmob_t">گیم‌نت منیجر</b></a>
 </div></div>
 <footer style="margin-top:60px"><div class="wrap f-row">
-<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
-<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/StegaSuite" target="_blank">گیت‌هاب پروژه</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b data-i18n="home.f_name">الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/StegaSuite" target="_blank">GitHub</a><a href="https://t.me/a_c_official" target="_blank">Telegram</a></div>
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n1.js"></script>
+<script src="../assets/js/i18n2.js"></script>
+<script src="../assets/js/i18n3.js"></script>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/three-hero.js"></script>
+<script src="../assets/js/main.js"></script>
 </body></html>

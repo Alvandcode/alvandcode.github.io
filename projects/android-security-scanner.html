@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>اسکنر امنیت اندروید | الوند کد</title>
 <meta name="description" content="اسکنر امنیتی heuristic اندروید بدون نیاز به روت — اسکن APK، مجوزهای خطرناک و امتیاز ریسک.">
 <link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/theme.css">
 <style>:root{--accent:#6366f1;--accent2:#a855f7}</style>
 </head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
 <header id="siteHeader"><nav class="nav">
-<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
-<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
-<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/android-security-scanner" target="_blank">★ گیت‌هاب پروژه</a>
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home" data-i18n="common.nav_home">خانه</a><a href="../index.html#projects" class="active" data-i18n="common.nav_projects">پروژه‌ها</a><a href="../index.html#about" data-i18n="common.nav_about">درباره</a><a href="../index.html#contact" data-i18n="common.nav_contact">تماس</a></div>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/android-security-scanner" target="_blank" data-i18n="common.gh_proj">★ گیت‌هاب پروژه</a>
+</div>
 </nav></header>
 
 <div class="wrap">
-<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex" data-i18n="common.back">→ بازگشت به همه پروژه‌ها</a>
 <div class="proj-hero">
 <div>
 <div class="proj-icon">🛡️</div>
-<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">اسکنر امنیت اندروید <span class="grad">+ آنتی‌ویروس</span></h1>
-<p class="sub">اسکنر heuristic بدون نیاز به روت برای Termux؛ تنظیمات امنیتی، پردازش‌های مشکوک (Frida / Xposed / Miner) و فایل‌های APK را بررسی می‌کند و امتیاز ریسک ۰ تا ۱۰۰ می‌دهد.</p>
-<div class="meta"><span class="pill hot">★ 4 استار</span><span class="pill">Python</span><span class="pill">Termux</span><span class="pill">APKTool</span><span class="pill">MIT</span></div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px"><span data-i18n="p.android.ta">اسکنر امنیت اندروید</span> <span class="grad" data-i18n="p.android.tb">+ آنتی‌ویروس</span></h1>
+<p class="sub" data-i18n="p.android.sub">اسکنر heuristic بدون نیاز به روت برای Termux؛ ...</p>
+<div class="meta"><span class="pill hot" data-i18n="p.android.hot">★ 4 استار</span><span class="pill">Python</span><span class="pill">Termux</span><span class="pill">APKTool</span><span class="pill">MIT</span></div>
 <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
-<a class="btn btn-p" href="https://github.com/Alvandcode/android-security-scanner" target="_blank">⬇ دریافت از گیت‌هاب</a>
-<a class="btn btn-g" href="https://github.com/Alvandcode/android-security-scanner/blob/main/README.md" target="_blank">📖 مستندات</a>
+<a class="btn btn-p" href="https://github.com/Alvandcode/android-security-scanner" target="_blank" data-i18n="p.android.dl">⬇ دریافت از گیت‌هاب</a>
+<a class="btn btn-g" href="https://github.com/Alvandcode/android-security-scanner/blob/main/README.md" target="_blank" data-i18n="common.docs">📖 مستندات</a>
 </div></div>
 <div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">live scan — termux</span></div>
 <div class="shot-body term-body" style="font-size:.9rem">
@@ -39,35 +45,39 @@
 </div></div>
 </div>
 
-<section style="padding-top:20px"><div class="sec-head reveal"><div><h2>✨ قابلیت‌ها</h2></div></div>
+<section style="padding-top:20px"><div class="sec-head reveal"><div><h2 data-i18n="common.feat">✨ قابلیت‌ها</h2></div></div>
 <div class="feat-grid">
-<div class="feat reveal"><div class="e">⚙️</div><b>اسکن تنظیمات پایه</b><p style="color:var(--mut);font-size:.87rem">USB Debugging، نصب از منابع ناشناس و Developer Options.</p></div>
-<div class="feat reveal"><div class="e">🔬</div><b>اسکن پردازش‌ها</b><p style="color:var(--mut);font-size:.87rem">تشخیص Frida، Xposed، ماینرها و ابزارهای مشکوک در حال اجرا.</p></div>
-<div class="feat reveal"><div class="e">📦</div><b>کالبدشکافی APK</b><p style="color:var(--mut);font-size:.87rem">پشتیبانی از APK / APKS / XAPK با apktool و جستجوی رشته‌های مشکوک.</p></div>
-<div class="feat reveal"><div class="e">🧠</div><b>موتور heuristic</b><p style="color:var(--mut);font-size:.87rem">تحلیل مجوزهای خطرناک: SMS، دوربین، لوکیشن، Accessibility و…</p></div>
-<div class="feat reveal"><div class="e">📊</div><b>امتیاز ریسک هوشمند</b><p style="color:var(--mut);font-size:.87rem">نمره ۰ تا ۱۰۰ + پیشنهادهای امنیتی عملی + گزارش JSON.</p></div>
-<div class="feat reveal"><div class="e">🛠️</div><b>فیکس خودکار</b><p style="color:var(--mut);font-size:.87rem">رفع خودکار مشکلات رایج تنظیمات با یک دستور.</p></div>
+<div class="feat reveal"><div class="e">⚙️</div><b data-i18n="p.android.f1t">اسکن تنظیمات پایه</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.android.f1d">...</p></div>
+<div class="feat reveal"><div class="e">🔬</div><b data-i18n="p.android.f2t">اسکن پردازش‌ها</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.android.f2d">...</p></div>
+<div class="feat reveal"><div class="e">📦</div><b data-i18n="p.android.f3t">کالبدشکافی APK</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.android.f3d">...</p></div>
+<div class="feat reveal"><div class="e">🧠</div><b data-i18n="p.android.f4t">موتور heuristic</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.android.f4d">...</p></div>
+<div class="feat reveal"><div class="e">📊</div><b data-i18n="p.android.f5t">امتیاز ریسک هوشمند</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.android.f5d">...</p></div>
+<div class="feat reveal"><div class="e">🛠️</div><b data-i18n="p.android.f6t">فیکس خودکار</b><p style="color:var(--mut);font-size:.87rem" data-i18n="p.android.f6d">...</p></div>
 </div></section>
 
-<section style="padding-top:10px"><h2 class="reveal" style="margin-bottom:14px">🚀 نصب و اجرا</h2>
+<section style="padding-top:10px"><h2 class="reveal" data-i18n="common.inst">🚀 نصب و اجرا</h2>
 <div class="steps">
-<div class="step reveal"><b>۱. نصب Termux از F-Droid</b><br><span style="color:var(--mut)">نسخه گوگل‌پلی توصیه نمی‌شود. بعد دسترسی حافظه را بدهید.</span><div class="code"><button class="cp">کپی</button><span class="f">termux-setup-storage</span></div></div>
-<div class="step reveal"><b>۲. نصب وابستگی‌ها</b><div class="code"><button class="cp">کپی</button><span class="k">pkg</span> update && <span class="k">pkg</span> upgrade -y<br><span class="k">pkg</span> install python apktool -y<br>pip install --upgrade pip</div></div>
-<div class="step reveal"><b>۳. اجرای اسکنر</b><div class="code"><button class="cp">کپی</button>python strong_security_av.py</div></div>
+<div class="step reveal"><b data-i18n="p.android.s1t">۱. نصب Termux از F-Droid</b><br><span style="color:var(--mut)" data-i18n="p.android.s1d">...</span><div class="code"><button class="cp" data-i18n="common.copy">کپی</button><span class="f">termux-setup-storage</span></div></div>
+<div class="step reveal"><b data-i18n="p.android.s2t">۲. نصب وابستگی‌ها</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button><span class="k">pkg</span> update && <span class="k">pkg</span> upgrade -y<br><span class="k">pkg</span> install python apktool -y<br>pip install --upgrade pip</div></div>
+<div class="step reveal"><b data-i18n="p.android.s3t">۳. اجرای اسکنر</b><div class="code"><button class="cp" data-i18n="common.copy">کپی</button>python strong_security_av.py</div></div>
 </div>
-<p class="reveal" style="color:var(--mut);margin-top:16px;font-size:.88rem">⚠️ این ابزار heuristic است و جایگزین آنتی‌ویروس حرفه‌ای نیست. گزارش کامل در <span class="ltr">/sdcard/strong_security_report.json</span> ذخیره می‌شود.</p>
 </section>
 
 <div class="nextprev">
-<a class="np" href="qand-app.html"><small>← پروژه قبلی</small><b>🍰 قنادی قند</b></a>
-<a class="np" style="text-align:left" href="dns-benchmark-pro.html"><small>پروژه بعدی →</small><b>⚡ بنچمارک DNS پرو</b></a>
+<a class="np" href="qand-app.html"><small data-i18n="common.prev">← پروژه قبلی</small><b data-i18n="home.c_qand_t">🍰 قنادی قند</b></a>
+<a class="np" style="text-align:left" href="dns-benchmark-pro.html"><small data-i18n="common.next">پروژه بعدی →</small><b data-i18n="home.c_dns_t">⚡ بنچمارک DNS پرو</b></a>
 </div>
 </div>
 
 <footer style="margin-top:60px"><div class="wrap f-row">
-<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
-<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/android-security-scanner" target="_blank">گیت‌هاب پروژه</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b data-i18n="home.f_name">الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/android-security-scanner" target="_blank">GitHub</a><a href="https://t.me/a_c_official" target="_blank">Telegram</a></div>
 </div></footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+<script src="../assets/js/i18n1.js"></script>
+<script src="../assets/js/i18n2.js"></script>
+<script src="../assets/js/i18n3.js"></script>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/three-hero.js"></script>
+<script src="../assets/js/main.js"></script>
 </body></html>

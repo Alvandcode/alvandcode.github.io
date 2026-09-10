@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="fa" dir="rtl">
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>الوند کد | توسعه‌دهنده نرم‌افزار — Alvandcode</title>
 <meta name="description" content="الوند کد — توسعه‌دهنده ابزارهای امنیتی، شبکه، OCR و اپ‌های اندروید و ویندوز. ۹ پروژه متن‌باز با صفحات اختصاصی.">
 <link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="assets/css/theme.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236366f1'/><text x='50' y='72' font-size='58' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>A</text></svg>">
 </head>
 <body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d"></canvas>
 <div class="bg-grid"></div>
 <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
@@ -16,40 +18,43 @@
 
 <header id="siteHeader">
   <nav class="nav">
-    <a class="logo" href="#home"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
+    <a class="logo" href="#home"><span class="logo-mark">A</span><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
     <div class="links">
-      <a href="#home" class="active">خانه</a>
-      <a href="#projects">پروژه‌ها</a>
-      <a href="#about">درباره من</a>
-      <a href="#skills">مهارت‌ها</a>
-      <a href="#contact">تماس</a>
+      <a href="#home" class="active" data-i18n="common.nav_home">خانه</a>
+      <a href="#projects" data-i18n="common.nav_projects">پروژه‌ها</a>
+      <a href="#about" data-i18n="common.nav_about">درباره من</a>
+      <a href="#skills" data-i18n="common.nav_skills">مهارت‌ها</a>
+      <a href="#contact" data-i18n="common.nav_contact">تماس</a>
     </div>
-    <div style="display:flex;gap:10px;align-items:center">
-      <a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode" target="_blank">★ گیت‌هاب</a>
+    <div class="nav-tools">
+      <select class="lang-sel" aria-label="language"></select>
+      <button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+      <a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode" target="_blank" data-i18n="common.nav_github">★ گیت‌هاب</a>
       <button class="burger" id="burger">☰</button>
     </div>
   </nav>
 </header>
 <div class="mobile-menu" id="mmenu">
-  <a href="#home">خانه</a><a href="#projects">پروژه‌ها</a><a href="#about">درباره من</a><a href="#skills">مهارت‌ها</a><a href="#contact">تماس</a>
+  <a href="#home" data-i18n="common.nav_home">خانه</a><a href="#projects" data-i18n="common.nav_projects">پروژه‌ها</a><a href="#about" data-i18n="common.nav_about">درباره من</a><a href="#skills" data-i18n="common.nav_skills">مهارت‌ها</a><a href="#contact" data-i18n="common.nav_contact">تماس</a>
+  <div style="display:flex;gap:10px;padding:10px 6px"><select class="lang-sel" style="flex:1" aria-label="language"></select></div>
 </div>
 
 <!-- HERO -->
 <section id="home" style="padding-top:0">
 <div class="wrap hero">
   <div>
-    <span class="eyebrow"><span class="dot"></span> توسعه‌دهنده نرم‌افزار • متن‌باز</span>
-    <h1 class="hero-t">الوند <span class="grad">کد</span><br>می‌سازم، نه فقط کدنویسی</h1>
-    <p class="sub" style="margin-top:16px">تخصص من ساخت <b style="color:#fff" id="typing">ابزارهای امنیتی</b><span class="caret"></span> است — از اسکنر اندروید و بنچمارک DNS تا OCR فارسی، استگانوگرافی و مدیریت گیم‌نت. هر پروژه یک صفحه اختصاصی با آموزش نصب دارد.</p>
+    <span class="eyebrow"><span class="dot"></span><span data-i18n="home.hero_badge">توسعه‌دهنده نرم‌افزار • متن‌باز</span></span>
+    <h1 class="hero-t"><span data-i18n="home.hero_t1">الوند</span> <span class="grad" data-i18n="home.hero_t2">کد</span><br><span data-i18n="home.hero_t3">می‌سازم، نه فقط کدنویسی</span></h1>
+    <p class="sub" style="margin-top:16px"><span data-i18n="home.hero_sa">تخصص من ساخت</span> <b style="color:#818cf8" id="typing">ابزارهای امنیتی</b><span class="caret"></span> <span data-i18n="home.hero_sb">است — از اسکنر اندروید و بنچمارک DNS تا OCR فارسی، استگانوگرافی و مدیریت گیم‌نت. هر پروژه یک صفحه اختصاصی با آموزش نصب دارد.</span></p>
     <div class="hero-cta">
-      <a href="#projects" class="btn btn-p">🚀 مشاهده ۹ پروژه</a>
+      <a href="#projects" class="btn btn-p" data-i18n="home.hero_cta1">🚀 مشاهده ۹ پروژه</a>
       <a href="https://github.com/Alvandcode" target="_blank" class="btn btn-g">★ github.com/Alvandcode</a>
     </div>
     <div class="hero-stats">
-      <div class="stat"><b data-count="9">0</b><span>پروژه فعال</span></div>
-      <div class="stat"><b data-count="25" data-suffix="+">0</b><span>استار گیت‌هاب</span></div>
-      <div class="stat"><b data-count="6">0</b><span>زبان و پلتفرم</span></div>
-      <div class="stat"><b>۱۰۰٪</b><span>متن‌باز</span></div>
+      <div class="stat"><b data-count="9">0</b><span data-i18n="home.stat1l">پروژه فعال</span></div>
+      <div class="stat"><b data-count="25" data-suffix="+">0</b><span data-i18n="home.stat2l">استار گیت‌هاب</span></div>
+      <div class="stat"><b data-count="6">0</b><span data-i18n="home.stat3l">زبان و پلتفرم</span></div>
+      <div class="stat"><b data-i18n="home.stat4v">۱۰۰٪</b><span data-i18n="home.stat4l">متن‌باز</span></div>
     </div>
   </div>
   <div class="stage">
@@ -60,19 +65,19 @@
           <div><span class="t-g">$</span> <span class="t-b">whoami</span></div>
           <div class="t-p">→ alvandcode — builder of useful tools</div>
           <div><span class="t-g">$</span> <span class="t-b">ls projects/</span></div>
-          <div class="t-y">android-scanner/  dns-benchmark/  ocr-stt/</div>
-          <div class="t-y">stegasuite/  receiptvision/  gamenet-pro/</div>
+          <div class="t-y">android-scanner/ dns-benchmark/ ocr-stt/</div>
+          <div class="t-y">stegasuite/ receiptvision/ gamenet-pro/</div>
           <div><span class="t-g">$</span> <span class="t-b">./ship --open-source</span> <span class="caret"></span></div>
           <div class="t-m">✓ 9 projects deployed to GitHub Pages</div>
         </div>
       </div>
-      <div class="float-chip chip1">🛡️ <span>امنیت اندروید</span></div>
-      <div class="float-chip chip2">⚡ <span>DNS Benchmark</span></div>
-      <div class="float-chip chip3">🎮 <span>GameNet Pro</span></div>
+      <div class="float-chip chip1" data-i18n="home.chip1">🛡️ امنیت اندروید</div>
+      <div class="float-chip chip2" data-i18n="home.chip2">⚡ DNS Benchmark</div>
+      <div class="float-chip chip3" data-i18n="home.chip3">🎮 GameNet Pro</div>
     </div>
   </div>
 </div>
-<div class="scroll-hint"><div class="mouse"></div><span>اسکرول کن — سه‌بعدی حرکت می‌کند</span></div>
+<div class="scroll-hint"><div class="mouse"></div><span data-i18n="home.scroll">اسکرول کن — سه‌بعدی حرکت می‌کند</span></div>
 </section>
 
 <div class="marquee"><div> PYTHON ◆ ANDROID SECURITY ◆ DNS BENCHMARK ◆ OCR + STT ◆ STEGANOGRAPHY ◆ SPRING BOOT ◆ FLUTTER ◆ ELECTRON ◆ DOCKER ◆ OPEN SOURCE ◆&nbsp;&nbsp;PYTHON ◆ ANDROID SECURITY ◆ DNS BENCHMARK ◆ OCR + STT ◆ STEGANOGRAPHY ◆ SPRING BOOT ◆ FLUTTER ◆ ELECTRON ◆ DOCKER ◆ OPEN SOURCE ◆ </div></div>
@@ -81,73 +86,73 @@
 <section id="projects">
 <div class="wrap">
   <div class="sec-head reveal">
-    <div><span class="eyebrow">💼 نمونه‌کارها</span><h2>۹ پروژه، <span class="grad">۹ دنیای متفاوت</span></h2>
-    <p>روی هر کارت کلیک کن تا وارد صفحه اختصاصی پروژه شوی — معرفی کامل، ویژگی‌ها، آموزش نصب و لینک گیت‌هاب.</p></div>
-    <a class="more" href="https://github.com/Alvandcode?tab=repositories" target="_blank">همه ریپوها در گیت‌هاب ←</a>
+    <div><span class="eyebrow" data-i18n="home.proj_eye">💼 نمونه‌کارها</span><h2><span data-i18n="home.proj_ta">۹ پروژه، </span><span class="grad" data-i18n="home.proj_tb">۹ دنیای متفاوت</span></h2>
+    <p data-i18n="home.proj_sub">روی هر کارت کلیک کن تا وارد صفحه اختصاصی پروژه شوی — معرفی کامل، ویژگی‌ها، آموزش نصب و لینک گیت‌هاب.</p></div>
+    <a class="more" href="https://github.com/Alvandcode?tab=repositories" target="_blank" data-i18n="common.more">همه ریپوها در گیت‌هاب ←</a>
   </div>
   <div class="grid3">
 
     <a class="pcard reveal" data-tilt style="--accent:#6366f1;--accent2:#a855f7" href="projects/android-security-scanner.html">
       <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 4</span><span class="p-emoji">🛡️</span></div>
-      <div class="p-body"><h3>اسکنر امنیت اندروید <small>android-scanner</small></h3><p>آنتی‌ویروس heuristic بدون نیاز به روت؛ اسکن APK، مجوزهای خطرناک و امتیاز ریسک ۰ تا ۱۰۰.</p>
-      <div class="p-tags"><span class="tag">امنیت</span><span class="tag">Termux</span><span class="tag">APKTool</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_android_t">اسکنر امنیت اندروید</span> <small>android-scanner</small></h3><p data-i18n="home.c_android_d">آنتی‌ویروس heuristic بدون نیاز به روت؛ اسکن APK، مجوزهای خطرناک و امتیاز ریسک ۰ تا ۱۰۰.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_android_g">امنیت</span><span class="tag">Termux</span><span class="tag">APKTool</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#f59e0b;--accent2:#ef4444" href="projects/dns-benchmark-pro.html">
       <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 4</span><span class="p-emoji">⚡</span></div>
-      <div class="p-body"><h3>بنچمارک DNS پرو <small>dns-benchmark</small></h3><p>تست همزمان DNSها با UDP / DoH / DoT، امتیازدهی A+ تا F و خروجی CSV و JSON و HTML.</p>
-      <div class="p-tags"><span class="tag">شبکه</span><span class="tag">Async</span><span class="tag">گزارش‌ساز</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_dns_t">بنچمارک DNS پرو</span> <small>dns-benchmark</small></h3><p data-i18n="home.c_dns_d">تست همزمان DNSها با UDP / DoH / DoT، امتیازدهی A+ تا F و خروجی CSV و JSON و HTML.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_dns_g">شبکه</span><span class="tag">Async</span><span class="tag">Reports</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#06b6d4;--accent2:#14b8a6" href="projects/ocr-stt-tool.html">
       <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 4</span><span class="p-emoji">🔍</span></div>
-      <div class="p-body"><h3>OCR + تبدیل گفتار <small>ocr-stt-tool</small></h3><p>استخراج متن از عکس و PDF و تبدیل صدا به متن فارسی؛ رابط CLI و اپ Kivy موبایل.</p>
-      <div class="p-tags"><span class="tag">هوش مصنوعی</span><span class="tag">Tesseract</span><span class="tag">Kivy</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_ocr_t">OCR + تبدیل گفتار</span> <small>ocr-stt-tool</small></h3><p data-i18n="home.c_ocr_d">استخراج متن از عکس و PDF و تبدیل صدا به متن فارسی؛ رابط CLI و اپ Kivy موبایل.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_ocr_g">هوش مصنوعی</span><span class="tag">Tesseract</span><span class="tag">Kivy</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#22c55e;--accent2:#06b6d4" href="projects/gamenet-windows-pro.html">
-      <div class="pcard-top"><span class="p-lang">Electron + JS</span><span class="p-stars">★ ویژه</span><span class="p-emoji">🖥️</span></div>
-      <div class="p-body"><h3>گیم‌نت پرو ویندوز <small>gamenet-pro</small></h3><p>مدیریت کامل گیم‌نت: تایمر، بوفه، کیف‌پول، فاکتور PDF، ۲۱ تم و کنترل از راه دور.</p>
-      <div class="p-tags"><span class="tag">دسکتاپ</span><span class="tag">آفلاین</span><span class="tag">PDF</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">صفحه خرید ↗</span></div></div>
+      <div class="pcard-top"><span class="p-lang">Electron + JS</span><span class="p-stars">★ featured</span><span class="p-emoji">🖥️</span></div>
+      <div class="p-body"><h3><span data-i18n="home.c_gwin_t">گیم‌نت پرو ویندوز</span> <small>gamenet-pro</small></h3><p data-i18n="home.c_gwin_d">مدیریت کامل گیم‌نت: تایمر، بوفه، کیف‌پول، فاکتور PDF، ۲۱ تم و کنترل از راه دور.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_gwin_g">دسکتاپ</span><span class="tag">Offline</span><span class="tag">PDF</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#a855f7;--accent2:#ec4899" href="projects/stegasuite.html">
       <div class="pcard-top"><span class="p-lang">Kotlin</span><span class="p-stars">★ 3</span><span class="p-emoji">🕵️</span></div>
-      <div class="p-body"><h3>استگا سوئیت <small>StegaSuite</small></h3><p>مخفی‌کردن هر فایل داخل عکس PNG با رمزنگاری AES-256 و Jetpack Compose؛ کاملا آفلاین.</p>
-      <div class="p-tags"><span class="tag">اندروید</span><span class="tag">AES-256</span><span class="tag">Compose</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_steg_t">استگا سوئیت</span> <small>StegaSuite</small></h3><p data-i18n="home.c_steg_d">مخفی‌کردن هر فایل داخل عکس PNG با رمزنگاری AES-256 و Jetpack Compose؛ کاملا آفلاین.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_steg_g">اندروید</span><span class="tag">AES-256</span><span class="tag">Compose</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#3b82f6;--accent2:#6366f1" href="projects/gamenet-manager.html">
       <div class="pcard-top"><span class="p-lang">Android</span><span class="p-stars">★ 3</span><span class="p-emoji">🎮</span></div>
-      <div class="p-body"><h3>گیم‌نت منیجر اندروید <small>free</small></h3><p>نسخه رایگان موبایل برای مدیریت دستگاه‌ها، مشتریان، زمان و هزینه روی گوشی و تبلت.</p>
-      <div class="p-tags"><span class="tag">موبایل</span><span class="tag">رایگان</span><span class="tag">مدیریت</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_gmob_t">گیم‌نت منیجر اندروید</span> <small>free</small></h3><p data-i18n="home.c_gmob_d">نسخه رایگان موبایل برای مدیریت دستگاه‌ها، مشتریان، زمان و هزینه روی گوشی و تبلت.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_gmob_g">موبایل</span><span class="tag">Free</span><span class="tag">Manager</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#10b981;--accent2:#84cc16" href="projects/image-metadata-cleaner.html">
       <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 3</span><span class="p-emoji">🧹</span></div>
-      <div class="p-body"><h3>پاک‌کننده متادیتا <small>privacy</small></h3><p>حذف کامل EXIF و GPS از JPG/PNG/WebP با پردازش گروهی، واترمارک و API فلاسک.</p>
-      <div class="p-tags"><span class="tag">حریم خصوصی</span><span class="tag">CLI+API</span><span class="tag">Docker</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_meta_t">پاک‌کننده متادیتا</span> <small>privacy</small></h3><p data-i18n="home.c_meta_d">حذف کامل EXIF و GPS از JPG/PNG/WebP با پردازش گروهی، واترمارک و API فلاسک.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_meta_g">حریم خصوصی</span><span class="tag">CLI+API</span><span class="tag">Docker</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#f43f5e;--accent2:#fb923c" href="projects/receiptvision-core.html">
       <div class="pcard-top"><span class="p-lang">Java Spring</span><span class="p-stars">★ 3</span><span class="p-emoji">🧾</span></div>
-      <div class="p-body"><h3>رسیت‌ویژن <small>ReceiptVision</small></h3><p>سرویس OCR رسید با Spring Boot و Tesseract؛ فقط با یک دستور داکر بالا می‌آید.</p>
-      <div class="p-tags"><span class="tag">بک‌اند</span><span class="tag">Docker</span><span class="tag">OCR</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="p-body"><h3><span data-i18n="home.c_recv_t">رسیت‌ویژن</span> <small>ReceiptVision</small></h3><p data-i18n="home.c_recv_d">سرویس OCR رسید با Spring Boot و Tesseract؛ فقط با یک دستور داکر بالا می‌آید.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_recv_g">بک‌اند</span><span class="tag">Docker</span><span class="tag">OCR</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
     <a class="pcard reveal" data-tilt style="--accent:#ec4899;--accent2:#f59e0b" href="projects/qand-app.html">
-      <div class="pcard-top"><span class="p-lang">Flutter</span><span class="p-stars">★ جدید</span><span class="p-emoji">🍰</span></div>
-      <div class="p-body"><h3>قنادی قند <small>qand-app</small></h3><p>اپ سفارش قنادی با فلاتر و سوپابیس؛ سفارش کیک، پرداخت کارت‌به‌کارت و پنل مدیر.</p>
-      <div class="p-tags"><span class="tag">فلاتر</span><span class="tag">Supabase</span><span class="tag">اندروید ۷ تا ۱۷</span></div>
-      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+      <div class="pcard-top"><span class="p-lang">Flutter</span><span class="p-stars">★ new</span><span class="p-emoji">🍰</span></div>
+      <div class="p-body"><h3><span data-i18n="home.c_qand_t">قنادی قند</span> <small>qand-app</small></h3><p data-i18n="home.c_qand_d">اپ سفارش قنادی با فلاتر و سوپابیس؛ سفارش کیک، پرداخت کارت‌به‌کارت و پنل مدیر.</p>
+      <div class="p-tags"><span class="tag" data-i18n="home.c_qand_g">فلاتر</span><span class="tag">Supabase</span><span class="tag">Android 7–17</span></div>
+      <div class="p-foot"><span class="open" data-i18n="common.open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
     </a>
 
   </div>
@@ -158,20 +163,20 @@
 <section id="about" style="background:rgba(255,255,255,.015);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)">
 <div class="wrap about">
   <div class="about-card reveal">
-    <span class="eyebrow">👋 درباره من</span>
-    <h2 style="font-size:2.4rem;font-weight:900">الوند کد</h2>
-    <p style="color:var(--mut);margin-top:12px">توسعه‌دهنده نرم‌افزار، عاشق ابزارهای کاربردی و متن‌باز. تمرکزم پایتون، امنیت اندروید، شبکه و اپ‌های واقعی است که مردم هر روز استفاده می‌کنند — از گیم‌نت محل تا قنادی.</p>
+    <span class="eyebrow" data-i18n="home.about_eye">👋 درباره من</span>
+    <h2 style="font-size:2.4rem;font-weight:900" data-i18n="home.about_h">الوند کد</h2>
+    <p style="color:var(--mut);margin-top:12px" data-i18n="home.about_p1">توسعه‌دهنده نرم‌افزار، عاشق ابزارهای کاربردی و متن‌باز...</p>
     <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
-      <a class="btn btn-p" href="https://github.com/Alvandcode" target="_blank">دنبال کردن در گیت‌هاب</a>
-      <a class="btn btn-g" href="https://t.me/a_c_official" target="_blank">کانال تلگرام</a>
+      <a class="btn btn-p" href="https://github.com/Alvandcode" target="_blank" data-i18n="home.about_b1">دنبال کردن در گیت‌هاب</a>
+      <a class="btn btn-g" href="https://t.me/a_c_official" target="_blank" data-i18n="home.about_b2">کانال تلگرام</a>
     </div>
   </div>
   <div class="timeline">
-    <div class="tl reveal"><b>🛡️ امنیت و حریم خصوصی</b><span>اسکنر اندروید، پاک‌کننده EXIF و استگانوگرافی AES — ابزارهایی که از کاربر محافظت می‌کنند.</span></div>
-    <div class="tl reveal"><b>⚡ شبکه و عملکرد</b><span>بنچمارک DNS با موتور async، پشتیبانی UDP/DoH/DoT و سیستم امتیازدهی هوشمند.</span></div>
-    <div class="tl reveal"><b>🔍 پردازش هوشمند</b><span>OCR فارسی/انگلیسی، استخراج متن PDF و تبدیل گفتار به نوشتار روی دسکتاپ و موبایل.</span></div>
-    <div class="tl reveal"><b>🎮 محصول واقعی برای کسب‌وکار</b><span>گیم‌نت پرو (ویندوز + اندروید) و اپ قنادی قند — محصول‌هایی که پول درمی‌آورند، نه فقط دمو.</span></div>
-    <div class="tl reveal"><b>☁️ بک‌اند و داکر</b><span>سرویس Spring Boot برای OCR رسید؛ اجرای تک‌دستوری با Docker و دیتابیس H2.</span></div>
+    <div class="tl reveal"><b data-i18n="home.tl1t">🛡️ امنیت و حریم خصوصی</b><span data-i18n="home.tl1d">...</span></div>
+    <div class="tl reveal"><b data-i18n="home.tl2t">⚡ شبکه و عملکرد</b><span data-i18n="home.tl2d">...</span></div>
+    <div class="tl reveal"><b data-i18n="home.tl3t">🔍 پردازش هوشمند</b><span data-i18n="home.tl3d">...</span></div>
+    <div class="tl reveal"><b data-i18n="home.tl4t">🎮 محصول واقعی برای کسب‌وکار</b><span data-i18n="home.tl4d">...</span></div>
+    <div class="tl reveal"><b data-i18n="home.tl5t">☁️ بک‌اند و داکر</b><span data-i18n="home.tl5d">...</span></div>
   </div>
 </div>
 </section>
@@ -179,16 +184,16 @@
 <!-- SKILLS -->
 <section id="skills">
 <div class="wrap">
-  <div class="sec-head reveal"><div><span class="eyebrow">🧠 تخصص‌ها</span><h2>زرادخانه <span class="grad">تکنولوژی</span></h2></div></div>
+  <div class="sec-head reveal"><div><span class="eyebrow" data-i18n="home.sk_eye">🧠 تخصص‌ها</span><h2><span data-i18n="home.sk_ta">زرادخانه </span><span class="grad" data-i18n="home.sk_tb">تکنولوژی</span></h2></div></div>
   <div class="skills reveal">
-    <div class="skill"><div class="ic">🐍</div><b>Python</b><small>ابزار، امنیت، OCR</small><div class="bar"><i data-w="95"></i></div></div>
-    <div class="skill"><div class="ic">📱</div><b>Kotlin / Android</b><small>Compose, SAF</small><div class="bar"><i data-w="85"></i></div></div>
-    <div class="skill"><div class="ic">🎯</div><b>Dart / Flutter</b><small>اپ فروشگاهی</small><div class="bar"><i data-w="82"></i></div></div>
-    <div class="skill"><div class="ic">☕</div><b>Java / Spring</b><small>بک‌اند + Docker</small><div class="bar"><i data-w="80"></i></div></div>
-    <div class="skill"><div class="ic">⚡</div><b>JavaScript / Electron</b><small>اپ دسکتاپ</small><div class="bar"><i data-w="86"></i></div></div>
-    <div class="skill"><div class="ic">🌐</div><b>شبکه و DNS</b><small>UDP / DoH / DoT</small><div class="bar"><i data-w="88"></i></div></div>
-    <div class="skill"><div class="ic">🖼️</div><b>پردازش تصویر</b><small>Tesseract, EXIF</small><div class="bar"><i data-w="90"></i></div></div>
-    <div class="skill"><div class="ic">🐳</div><b>Docker و API</b><small>Flask, H2, Supabase</small><div class="bar"><i data-w="78"></i></div></div>
+    <div class="skill"><div class="ic">🐍</div><b>Python</b><small data-i18n="home.sk1d">ابزار، امنیت، OCR</small><div class="bar"><i data-w="95"></i></div></div>
+    <div class="skill"><div class="ic">📱</div><b>Kotlin / Android</b><small data-i18n="home.sk2d">Compose, SAF</small><div class="bar"><i data-w="85"></i></div></div>
+    <div class="skill"><div class="ic">🎯</div><b>Dart / Flutter</b><small data-i18n="home.sk3d">اپ فروشگاهی</small><div class="bar"><i data-w="82"></i></div></div>
+    <div class="skill"><div class="ic">☕</div><b>Java / Spring</b><small data-i18n="home.sk4d">بک‌اند + Docker</small><div class="bar"><i data-w="80"></i></div></div>
+    <div class="skill"><div class="ic">⚡</div><b>JavaScript / Electron</b><small data-i18n="home.sk5d">اپ دسکتاپ</small><div class="bar"><i data-w="86"></i></div></div>
+    <div class="skill"><div class="ic">🌐</div><b>Networking / DNS</b><small data-i18n="home.sk6d">UDP / DoH / DoT</small><div class="bar"><i data-w="88"></i></div></div>
+    <div class="skill"><div class="ic">🖼️</div><b>Image Processing</b><small data-i18n="home.sk7d">Tesseract, EXIF</small><div class="bar"><i data-w="90"></i></div></div>
+    <div class="skill"><div class="ic">🐳</div><b>Docker &amp; API</b><small data-i18n="home.sk8d">Flask, H2, Supabase</small><div class="bar"><i data-w="78"></i></div></div>
   </div>
 </div>
 </section>
@@ -197,13 +202,13 @@
 <section id="contact" style="padding-top:20px">
 <div class="wrap">
   <div class="contact-box reveal"><div class="contact-in">
-    <span class="eyebrow">📬 تماس</span>
-    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900">بیا با هم چیز خفن بسازیم</h2>
-    <p style="color:var(--mut)">برای همکاری، پیشنهاد فیچر یا گزارش باگ — در دسترسم.</p>
+    <span class="eyebrow" data-i18n="home.ct_eye">📬 تماس</span>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900" data-i18n="home.ct_t">بیا با هم چیز خفن بسازیم</h2>
+    <p style="color:var(--mut)" data-i18n="home.ct_sub">برای همکاری، پیشنهاد فیچر یا گزارش باگ — در دسترسم.</p>
     <div class="c-grid">
-      <a class="c-card" href="https://github.com/Alvandcode" target="_blank"><div class="ic">🐙</div><b>گیت‌هاب</b><br><small style="color:var(--mut)">github.com/Alvandcode</small></a>
-      <a class="c-card" href="https://t.me/a_c_official" target="_blank"><div class="ic">✈️</div><b>تلگرام</b><br><small style="color:var(--mut)">@a_c_official</small></a>
-      <a class="c-card" href="mailto:Alvandcode@atomicmail.io"><div class="ic">✉️</div><b>ایمیل</b><br><small class="ltr" style="color:var(--mut)">Alvandcode@atomicmail.io</small></a>
+      <a class="c-card" href="https://github.com/Alvandcode" target="_blank"><div class="ic">🐙</div><b data-i18n="home.ct1">گیت‌هاب</b><br><small style="color:var(--mut)">github.com/Alvandcode</small></a>
+      <a class="c-card" href="https://t.me/a_c_official" target="_blank"><div class="ic">✈️</div><b data-i18n="home.ct2">تلگرام</b><br><small style="color:var(--mut)">@a_c_official</small></a>
+      <a class="c-card" href="mailto:Alvandcode@atomicmail.io"><div class="ic">✉️</div><b data-i18n="home.ct3">ایمیل</b><br><small class="ltr" style="color:var(--mut)">Alvandcode@atomicmail.io</small></a>
     </div>
   </div></div>
 </div>
@@ -211,12 +216,16 @@
 
 <footer>
 <div class="wrap f-row">
-  <a class="logo" href="#home"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b><br><small style="color:var(--mut);font-size:.7rem">© ۱۴۰۴ — ساخته‌شده با ♥ و Three.js</small></span></a>
-  <div class="f-links"><a href="#projects">پروژه‌ها</a><a href="gamenet/">گیم‌نت پرو</a><a href="https://github.com/Alvandcode" target="_blank">گیت‌هاب</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+  <a class="logo" href="#home"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b data-i18n="home.f_name">الوند کد</b><br><small style="color:var(--mut);font-size:.7rem" data-i18n="common.f_rights">© ۱۴۰۴ — ساخته‌شده با ♥ و Three.js</small></span></a>
+  <div class="f-links"><a href="#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="gamenet/">GameNet Pro</a><a href="https://github.com/Alvandcode" target="_blank">GitHub</a><a href="https://t.me/a_c_official" target="_blank">Telegram</a></div>
 </div>
 </footer>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/js/i18n1.js"></script>
+<script src="assets/js/i18n2.js"></script>
+<script src="assets/js/i18n3.js"></script>
+<script src="assets/js/lang.js"></script>
 <script src="assets/js/three-hero.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
