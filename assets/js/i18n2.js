@@ -38,7 +38,7 @@ sk_eye: "🧠 Especialidades", sk_ta: "Arsenal de ", sk_tb: "tecnología",
 sk1d: "Herramientas, seguridad, OCR", sk2d: "Compose, SAF", sk3d: "App de tienda", sk4d: "Backend + Docker",
 sk5d: "App de escritorio", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Contacto", ct_t: "Construyamos algo genial juntos", ct_sub: "Disponible para colaboraciones, sugerencias y reporte de errores.",
-ct1: "GitHub", ct2: "Telegram", ct3: "Correo", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "Correo", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Todos los derechos reservados.", legal2: "Cualquier copia o uso indebido de los productos y servicios será perseguido legalmente."
 }, p: {
 android: { ta: "Escáner de seguridad Android", tb: "+ Antivirus",
 sub: "Escáner heurístico sin root para Termux; revisa ajustes, procesos sospechosos (Frida / Xposed / Miner) y archivos APK, y da una puntuación de riesgo 0–100.",
@@ -170,7 +170,7 @@ sk_eye: "🧠 Spécialités", sk_ta: "Arsenal ", sk_tb: "technologique",
 sk1d: "Outils, sécurité, OCR", sk2d: "Compose, SAF", sk3d: "App boutique", sk4d: "Backend + Docker",
 sk5d: "App bureau", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Contact", ct_t: "Construisons quelque chose de génial", ct_sub: "Disponible pour collaborations, idées et rapports de bugs.",
-ct1: "GitHub", ct2: "Telegram", ct3: "E-mail", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "E-mail", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Tous droits réservés.", legal2: "Toute copie ou utilisation abusive des produits et services sera poursuivie en justice."
 }, p: {
 android: { ta: "Scanner sécurité Android", tb: "+ Antivirus",
 sub: "Scanner heuristique sans root pour Termux ; vérifie les réglages, les processus suspects (Frida / Xposed / Miner) et les APK, avec un score de risque 0–100.",
@@ -302,7 +302,7 @@ sk_eye: "🧠 Especialidades", sk_ta: "Arsenal de ", sk_tb: "tecnologia",
 sk1d: "Ferramentas, segurança, OCR", sk2d: "Compose, SAF", sk3d: "App de loja", sk4d: "Backend + Docker",
 sk5d: "App desktop", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Contato", ct_t: "Vamos construir algo incrível juntos", ct_sub: "Disponível para parcerias, sugestões e reporte de bugs.",
-ct1: "GitHub", ct2: "Telegram", ct3: "E-mail", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "E-mail", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Todos os direitos reservados.", legal2: "Qualquer cópia ou uso indevido dos produtos e serviços será processado legalmente."
 }, p: {
 android: { ta: "Scanner de segurança Android", tb: "+ Antivírus",
 sub: "Scanner heurístico sem root para Termux; verifica ajustes, processos suspeitos (Frida / Xposed / Miner) e APKs, com pontuação de risco 0–100.",
@@ -434,7 +434,7 @@ sk_eye: "🧠 Skills", sk_ta: "Arsenal an ", sk_tb: "Technologie",
 sk1d: "Tools, Sicherheit, OCR", sk2d: "Compose, SAF", sk3d: "Store-App", sk4d: "Backend + Docker",
 sk5d: "Desktop-App", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Kontakt", ct_t: "Bauen wir etwas Cooles zusammen", ct_sub: "Verfügbar für Kooperationen, Feature-Ideen und Bug-Reports.",
-ct1: "GitHub", ct2: "Telegram", ct3: "E-Mail", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "E-Mail", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Alle Rechte vorbehalten.", legal2: "Jegliches Kopieren oder Missbrauchen der Produkte und Dienste wird rechtlich verfolgt."
 }, p: {
 android: { ta: "Android-Sicherheitsscanner", tb: "+ Antivirus",
 sub: "Heuristischer Scanner ohne Root für Termux; prüft Einstellungen, verdächtige Prozesse (Frida / Xposed / Miner) und APK-Dateien, mit Risiko-Score 0–100.",
@@ -566,7 +566,7 @@ sk_eye: "🧠 Specialità", sk_ta: "Arsenale di ", sk_tb: "tecnologia",
 sk1d: "Strumenti, sicurezza, OCR", sk2d: "Compose, SAF", sk3d: "App negozio", sk4d: "Backend + Docker",
 sk5d: "App desktop", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Contatti", ct_t: "Costruiamo qualcosa di fantastico", ct_sub: "Disponibile per collaborazioni, idee e segnalazioni di bug.",
-ct1: "GitHub", ct2: "Telegram", ct3: "Email", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "Email", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Tutti i diritti riservati.", legal2: "Qualsiasi copia o uso improprio di prodotti e servizi sarà perseguito legalmente."
 }, p: {
 android: { ta: "Scanner sicurezza Android", tb: "+ Antivirus",
 sub: "Scanner euristico senza root per Termux; controlla impostazioni, processi sospetti (Frida / Xposed / Miner) e file APK, con punteggio di rischio 0–100.",

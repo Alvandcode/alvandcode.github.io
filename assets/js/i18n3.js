@@ -38,7 +38,7 @@ sk_eye: "🧠 Uzmanlıklar", sk_ta: "Teknoloji ", sk_tb: "cephaneliği",
 sk1d: "Araçlar, güvenlik, OCR", sk2d: "Compose, SAF", sk3d: "Mağaza uygulaması", sk4d: "Backend + Docker",
 sk5d: "Masaüstü uygulaması", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 İletişim", ct_t: "Birlikte harika bir şey yapalım", ct_sub: "İş birliği, özellik önerisi ve hata bildirimi için buradayım.",
-ct1: "GitHub", ct2: "Telegram", ct3: "E-posta", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "E-posta", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Tüm hakları saklıdır.", legal2: "Ürün ve hizmetlerin her türlü kopyalanması veya kötüye kullanılması yasal takibe tabidir."
 }, p: {
 android: { ta: "Android güvenlik tarayıcı", tb: "+ Antivirüs",
 sub: "Termux için rootsuz heuristic tarayıcı; ayarları, şüpheli süreçleri (Frida / Xposed / Miner) ve APK dosyalarını denetler, 0–100 risk puanı verir.",
@@ -170,7 +170,7 @@ sk_eye: "🧠 Специализация", sk_ta: "Арсенал ", sk_tb: "т�
 sk1d: "Инструменты, безопасность, OCR", sk2d: "Compose, SAF", sk3d: "Приложение магазина", sk4d: "Backend + Docker",
 sk5d: "Десктоп-приложение", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Контакты", ct_t: "Давайте создадим что-то крутое", ct_sub: "Открыт для сотрудничества, идей и баг-репортов.",
-ct1: "GitHub", ct2: "Telegram", ct3: "Почта", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "Почта", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Все права защищены.", legal2: "Любое копирование или неправомерное использование продуктов и услуг преследуется по закону."
 }, p: {
 android: { ta: "Сканер безопасности Android", tb: "+ Антивирус",
 sub: "Эвристический сканер без root для Termux; проверяет настройки, подозрительные процессы (Frida / Xposed / Miner) и APK-файлы, выставляя оценку риска 0–100.",
@@ -302,7 +302,7 @@ sk_eye: "🧠 Keahlian", sk_ta: "Gudang ", sk_tb: "teknologi",
 sk1d: "Alat, keamanan, OCR", sk2d: "Compose, SAF", sk3d: "Aplikasi toko", sk4d: "Backend + Docker",
 sk5d: "Aplikasi desktop", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Kontak", ct_t: "Mari bangun sesuatu yang keren", ct_sub: "Tersedia untuk kolaborasi, saran fitur, dan laporan bug.",
-ct1: "GitHub", ct2: "Telegram", ct3: "Email", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "Email", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Hak cipta dilindungi.", legal2: "Penyalinan atau penyalahgunaan produk dan layanan akan dituntut secara hukum."
 }, p: {
 android: { ta: "Pemindai keamanan Android", tb: "+ Antivirus",
 sub: "Pemindai heuristik tanpa root untuk Termux; memeriksa pengaturan, proses mencurigakan (Frida / Xposed / Miner), dan file APK dengan skor risiko 0–100.",
@@ -434,7 +434,7 @@ sk_eye: "🧠 Chuyên môn", sk_ta: "Kho ", sk_tb: "công nghệ",
 sk1d: "Công cụ, bảo mật, OCR", sk2d: "Compose, SAF", sk3d: "App cửa hàng", sk4d: "Backend + Docker",
 sk5d: "App máy tính", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 Liên hệ", ct_t: "Cùng xây điều tuyệt vời", ct_sub: "Sẵn sàng hợp tác, gợi ý tính năng và nhận báo lỗi.",
-ct1: "GitHub", ct2: "Telegram", ct3: "Email", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "Email", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — Bảo lưu mọi quyền.", legal2: "Mọi sao chép hoặc lạm dụng sản phẩm và dịch vụ sẽ bị xử lý theo pháp luật."
 }, p: {
 android: { ta: "Trình quét bảo mật Android", tb: "+ Antivirus",
 sub: "Trình quét heuristic không cần root cho Termux; kiểm tra cài đặt, tiến trình đáng ngờ (Frida / Xposed / Miner) và file APK, chấm điểm rủi ro 0–100.",
@@ -566,7 +566,7 @@ sk_eye: "🧠 専門分野", sk_ta: "技術の", sk_tb: "武器庫",
 sk1d: "ツール・安全・OCR", sk2d: "Compose, SAF", sk3d: "店舗アプリ", sk4d: "バックエンド + Docker",
 sk5d: "デスクトップアプリ", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 連絡先", ct_t: "一緒にすごいものを作ろう", ct_sub: "コラボ、機能提案、バグ報告お待ちしています。",
-ct1: "GitHub", ct2: "Telegram", ct3: "メール", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "メール", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — 全著作権所有。", legal2: "製品・サービスの無断複製や不正利用は法的措置の対象となります。"
 }, p: {
 android: { ta: "Androidセキュリティスキャナー", tb: "+ アンチウイルス",
 sub: "Termux向けroot不要ヒューリスティックスキャナー。設定、怪しいプロセス(Frida / Xposed / Miner)、APKを検査し0–100のリスクスコアを表示。",
@@ -698,7 +698,7 @@ sk_eye: "🧠 전문 분야", sk_ta: "기술 ", sk_tb: "무기고",
 sk1d: "도구・보안・OCR", sk2d: "Compose, SAF", sk3d: "스토어 앱", sk4d: "백엔드 + Docker",
 sk5d: "데스크톱 앱", sk6d: "UDP / DoH / DoT", sk7d: "Tesseract, EXIF", sk8d: "Flask, H2, Supabase",
 ct_eye: "📬 연락처", ct_t: "함께 멋진 것을 만들어요", ct_sub: "협업, 기능 제안, 버그 제보 환영합니다.",
-ct1: "GitHub", ct2: "Telegram", ct3: "메일", f_name: "Alvand Code"
+ct1: "GitHub", ct2: "Telegram", ct3: "메일", f_name: "Alvand Code", legal1: "© 2025 Alvand Code — 모든 권리 보유.", legal2: "제품 및 서비스의 무단 복제나 오용은 법적 조치를 받습니다."
 }, p: {
 android: { ta: "Android 보안 스캐너", tb: "+ 백신",
 sub: "Termux용 루트 없는 휴리스틱 스캐너. 설정, 수상한 프로세스(Frida / Xposed / Miner), APK를 검사하고 0–100 위험 점수 표시.",
