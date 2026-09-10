@@ -80,7 +80,7 @@ html[dir="ltr"] .term-body{text-align:left}
 @media(max-width:680px){
 .nav{padding:10px 12px;gap:8px}
 .nav .logo{gap:8px;flex-shrink:1;min-width:0}
-.nav .logo-mark{width:34px;height:34px;font-size:1.15rem;border-radius:11px;flex-shrink:0}
+.nav .logo-img{width:34px;height:34px;border-radius:11px;flex-shrink:0}
 .nav .logo b{font-size:.95rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .nav .logo small{display:none}
 .nav-tools{gap:7px;min-width:0;flex-shrink:0}

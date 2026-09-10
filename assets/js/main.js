@@ -88,6 +88,19 @@
     document.querySelectorAll('.cp').forEach(function(b){b.textContent=tr('common.copy');});
   });
 
+  // logo image fallback: if assets/img/logo.png is missing, show the styled "A" mark
+  function logoFallback(img){
+    if(img.dataset.logoFb) return; img.dataset.logoFb="1";
+    var s=document.createElement('span');
+    s.className='logo-mark'; s.textContent='A';
+    var st=img.getAttribute('style'); if(st) s.setAttribute('style',st);
+    img.replaceWith(s);
+  }
+  document.querySelectorAll('img.logo-img').forEach(function(img){
+    img.addEventListener('error',function(){logoFallback(img);});
+    if(img.complete && img.naturalWidth===0) logoFallback(img);
+  });
+
   // typing effect (per-language words)
   var ty=document.getElementById('typing');
   if(ty){

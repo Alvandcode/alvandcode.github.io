@@ -43,6 +43,7 @@ header.scrolled .nav{background:rgba(8,8,18,.88);box-shadow:0 12px 44px rgba(99,
 .logo-mark{width:44px;height:44px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:1.5rem;color:#fff;
   background:linear-gradient(135deg,#6366f1,#a855f7 60%,#22d3ee);box-shadow:0 6px 24px rgba(99,102,241,.5),inset 0 1px 0 rgba(255,255,255,.4);
   transform-style:preserve-3d;animation:logoFloat 5s ease-in-out infinite}
+.logo-img{width:44px;height:44px;object-fit:cover;border-radius:14px;background:#0b1030;box-shadow:0 6px 24px rgba(99,102,241,.5);transform-style:preserve-3d;animation:logoFloat 5s ease-in-out infinite;flex-shrink:0}
 @keyframes logoFloat{0%,100%{transform:rotateY(-12deg) rotateX(8deg)}50%{transform:rotateY(14deg) rotateX(-6deg)}}
 .logo b{font-size:1.15rem}.logo small{display:block;color:var(--mut);font-size:.65rem;letter-spacing:3px}
 .links{display:flex;gap:26px;font-size:.92rem;color:#c6cade}
