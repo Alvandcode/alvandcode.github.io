@@ -9,18 +9,28 @@
 /* smooth color crossfade while theme is switching */
 html.theming,html.theming *,html.theming *::before,html.theming *::after{transition:background-color .7s ease,color .7s ease,border-color .7s ease,box-shadow .7s ease,fill .7s ease,stroke .7s ease !important}
 
-/* ===== sunrise / sunset veil ===== */
+/* ===== sunrise / moonset veil ===== */
 #veil{position:fixed;inset:0;z-index:200;pointer-events:none;opacity:0;transition:opacity .45s ease;overflow:hidden}
 #veil.show{opacity:1}
 #veil .veil-sun{position:absolute;left:50%;width:150px;height:150px;margin-left:-75px;border-radius:50%;
   background:radial-gradient(circle,#fff8e7 0%,#ffd76e 35%,#ff9a3c 65%,rgba(255,154,60,0) 72%);
   box-shadow:0 0 120px 60px rgba(255,170,80,.55)}
-#veil[data-mode="rise"]{background:linear-gradient(180deg,#0a0f2e 0%,#2c2560 42%,#b45a8d 68%,#ff9a5c 85%,#ffd9a0 100%)}
-#veil[data-mode="rise"] .veil-sun{bottom:-170px;animation:veilRise 1.5s ease forwards}
+#veil::after{content:'';position:absolute;left:50%;top:-150px;width:110px;height:110px;margin-left:-55px;border-radius:50%;opacity:0;
+  background:radial-gradient(circle at 35% 32%,#fffdf4 0%,#e8e2d2 45%,#b9b2a1 75%,#8f887a 100%);
+  box-shadow:inset -16px -12px 0 rgba(60,60,80,.25),0 0 90px 45px rgba(190,200,255,.30)}
+#veil::before{content:'';position:absolute;inset:0;opacity:0;
+  background-image:radial-gradient(1.6px 1.6px at 12% 22%,#fff,transparent),radial-gradient(1.3px 1.3px at 32% 12%,#fff,transparent),radial-gradient(1.8px 1.8px at 55% 26%,#fff,transparent),radial-gradient(1.2px 1.2px at 72% 14%,#fff,transparent),radial-gradient(1.6px 1.6px at 86% 32%,#fff,transparent),radial-gradient(1.3px 1.3px at 44% 42%,#fff,transparent),radial-gradient(1.5px 1.5px at 64% 48%,#fff,transparent),radial-gradient(1.2px 1.2px at 24% 55%,#fff,transparent)}
+/* sunrise: sun climbs from the bottom */
+#veil.show[data-mode="rise"]{background:linear-gradient(180deg,#0a0f2e 0%,#2c2560 42%,#b45a8d 68%,#ff9a5c 85%,#ffd9a0 100%)}
+#veil.show[data-mode="rise"] .veil-sun{bottom:-170px;animation:veilRise 1.5s ease forwards}
 @keyframes veilRise{to{transform:translateY(-62vh)}}
-#veil[data-mode="set"]{background:linear-gradient(180deg,#1c1440 0%,#7a3b6e 45%,#ff8c42 72%,#3a2358 100%)}
-#veil[data-mode="set"] .veil-sun{top:-170px;animation:veilSet 1.5s ease forwards}
-@keyframes veilSet{to{transform:translateY(62vh)}}
+#veil.show[data-mode="rise"]::after{opacity:0}
+/* moonset: moon descends from the top into a night sky */
+#veil.show[data-mode="set"]{background:linear-gradient(180deg,#04060e 0%,#0e1836 45%,#2a3a6e 70%,#090e22 100%)}
+#veil.show[data-mode="set"] .veil-sun{display:none}
+#veil.show[data-mode="set"]::before{opacity:.85}
+#veil.show[data-mode="set"]::after{opacity:1;animation:veilMoon 1.5s ease forwards}
+@keyframes veilMoon{to{transform:translateY(64vh)}}
 
 /* ===== light theme ===== */
 html[data-theme="light"]{--bg:#edf0f8;--bg2:#e2e6f3;--card:#ffffff;--bd:rgba(23,26,48,.14);--txt:#181b31;--mut:#5d6179;color-scheme:light}

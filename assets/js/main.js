@@ -38,6 +38,35 @@
   }
   if(matchMedia('(pointer:fine)').matches){document.querySelectorAll('[data-tilt]').forEach(function(c){tilt(c,10);});}
 
+  // touch tilt + reveal flourish for mobile (no hover there)
+  if(matchMedia('(pointer:coarse)').matches){
+    document.querySelectorAll('[data-tilt]').forEach(function(card){
+      function setTilt(t){
+        var r=card.getBoundingClientRect();
+        var x=(t.clientX-r.left)/r.width-.5, y=(t.clientY-r.top)/r.height-.5;
+        x=Math.max(-.5,Math.min(.5,x)); y=Math.max(-.5,Math.min(.5,y));
+        card.style.transform='perspective(900px) rotateY('+(x*14)+'deg) rotateX('+(-y*14)+'deg) scale(1.02)';
+      }
+      function clearTilt(){card.style.transform='';}
+      card.addEventListener('touchstart',function(e){if(e.touches[0])setTilt(e.touches[0]);},{passive:true});
+      card.addEventListener('touchmove',function(e){if(e.touches[0])setTilt(e.touches[0]);},{passive:true});
+      card.addEventListener('touchend',clearTilt);
+      card.addEventListener('touchcancel',clearTilt);
+    });
+    // one-time 3D swing when a card scrolls into view
+    var ioT=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){
+      var el=e.target;ioT.unobserve(el);
+      try{
+        el.animate([
+          {transform:'perspective(900px) rotateY(-14deg)'},
+          {transform:'perspective(900px) rotateY(10deg)'},
+          {transform:'perspective(900px) rotateY(0deg)'}
+        ],{duration:700,easing:'ease-out'});
+      }catch(err){}
+    }});},{threshold:.4});
+    document.querySelectorAll('[data-tilt]').forEach(function(c){ioT.observe(c);});
+  }
+
   // cursor glow follows mouse (desktop)
   var glow=document.getElementById('glow');
   if(glow&&matchMedia('(pointer:fine)').matches){

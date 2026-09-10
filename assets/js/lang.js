@@ -81,9 +81,7 @@
     var toLight = currentTheme() !== "light";
     veil.setAttribute("data-mode", toLight ? "rise" : "set");
     document.documentElement.classList.add("theming");
-    /* restart sun animation */
-    var sun = veil.querySelector(".veil-sun");
-    if (sun){ var c = sun.cloneNode(true); sun.parentNode.replaceChild(c, sun); }
+    void veil.offsetWidth;
     veil.classList.add("show");
     setTimeout(function(){ setTheme(toLight ? "light" : "dark"); }, 650);
     setTimeout(function(){
