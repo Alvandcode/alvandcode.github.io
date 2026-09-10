@@ -13,12 +13,16 @@
 <meta property="og:image" content="https://alvandcode.github.io/assets/img/logo.png">
 <title>الوند کد | توسعه‌دهنده نرم‌افزار — Alvandcode</title>
 <meta name="description" content="الوند کد — توسعه‌دهنده ابزارهای امنیتی، شبکه، OCR و اپ‌های اندروید و ویندوز. ۹ پروژه متن‌باز با صفحات اختصاصی.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/theme.css">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 </head>
 <body>
+<a class="skip" href="#maincontent" data-i18n="common.skip">skip</a>
 <div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d" aria-hidden="true"></canvas>
 <div class="bg-grid"></div>
@@ -39,7 +43,7 @@
       <select class="lang-sel" aria-label="language"></select>
       <button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
       <a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode" target="_blank" data-i18n="common.nav_github">★ گیت‌هاب</a>
-      <button class="burger" id="burger">☰</button>
+      <button class="burger" id="burger" data-i18n-attr="aria-label:common.menu" aria-label="menu">☰</button>
     </div>
   </nav>
 </header>
@@ -50,7 +54,7 @@
 
 <!-- HERO -->
 <section id="home" style="padding-top:0">
-<div class="wrap hero">
+<div id="maincontent" class="wrap hero">
   <div>
     <span class="eyebrow"><span class="dot"></span><span data-i18n="home.hero_badge">توسعه‌دهنده نرم‌افزار • متن‌باز</span></span>
     <h1 class="hero-t"><span data-i18n="home.hero_t1">الوند</span> <span class="grad" data-i18n="home.hero_t2">کد</span><br><span data-i18n="home.hero_t3">می‌سازم، نه فقط کدنویسی</span></h1>
@@ -244,12 +248,10 @@
 </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="assets/js/i18n1.js"></script>
 <script src="assets/js/i18n2.js"></script>
 <script src="assets/js/i18n3.js"></script>
 <script src="assets/js/lang.js"></script>
-<script src="assets/js/three-hero.js"></script>
 <script src="assets/js/main.js"></script>
 <script src="assets/js/github.js"></script>
 </body>

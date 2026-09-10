@@ -11,12 +11,16 @@
 <meta property="og:description" content="Developer portfolio: security tools, networking, OCR and mobile apps.">
 <meta property="og:image" content="https://alvandcode.github.io/assets/img/logo.png">
 <title>404 | الوند کد</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/theme.css">
 <link rel="icon" type="image/png" href="assets/img/favicon.png">
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 </head>
 <body>
+<a class="skip" href="#maincontent" data-i18n="common.skip">skip</a>
 <div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d" aria-hidden="true"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div>
 <header id="siteHeader"><nav class="nav">
@@ -26,7 +30,7 @@
 <button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
 </div>
 </nav></header>
-<div class="wrap" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px">
+<div id="maincontent" class="wrap" style="min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:16px">
 <div style="font-size:6rem;font-weight:900" class="grad">404</div>
 <h1 id="t404t">این صفحه گم شد! 🛸</h1>
 <p style="color:var(--mut)" id="t404s">ولی ۹ پروژه خفن منتظرتن…</p>
@@ -61,11 +65,9 @@ function paint404(){
 window.addEventListener("langchange", paint404);
 window.addEventListener("DOMContentLoaded", function(){ setTimeout(paint404, 50); });
 </script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <script src="assets/js/i18n1.js"></script>
 <script src="assets/js/i18n2.js"></script>
 <script src="assets/js/i18n3.js"></script>
 <script src="assets/js/lang.js"></script>
-<script src="assets/js/three-hero.js"></script>
 <script src="assets/js/main.js"></script>
 </body></html>

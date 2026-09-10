@@ -18,6 +18,19 @@
     if (window.applyLang) applyLang(document.documentElement.getAttribute("data-lang") || "fa");
   }
 
+  function jsLib(src, next){
+    var s = document.createElement("script");
+    s.src = src; s.async = true;
+    s.onload = next; s.onerror = next;
+    document.head.appendChild(s);
+  }
+  function ensureMD(cb){
+    if (window.marked && window.DOMPurify){ cb(); return; }
+    jsLib("https://cdn.jsdelivr.net/npm/marked@12/marked.min.js", function(){
+      jsLib("https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js", cb);
+    });
+  }
+
   function renderMD(md){
     var box = $("gen-readme");
     try {
@@ -68,7 +81,7 @@
         fetch("https://raw.githubusercontent.com/" + USER + "/" + repo + "/" + branches[i] + "/README.md").then(function(res){
           if (!res.ok) throw 0;
           return res.text();
-        }).then(renderMD).catch(function(){ next(i + 1); });
+        }).then(function(md){ ensureMD(function(){ renderMD(md); }); }).catch(function(){ next(i + 1); });
       })(0);
     }).catch(showError);
   }

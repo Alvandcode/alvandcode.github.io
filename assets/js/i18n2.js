@@ -1,6 +1,6 @@
 /* Alvandcode i18n — batch 2: Spanish, French, Portuguese, German, Italian */
 window.I18N = Object.assign(window.I18N || {}, {
-es: { dir: "ltr", "auto": {"eye": "🔴 En vivo desde GitHub", "ta": "Lo último, ", "tb": "automático", "sub": "Cada repo nuevo que cree aparece aquí solo — sin tocar el sitio.", "loading": "Obteniendo repos de GitHub…", "fail": "No se pudo obtener de GitHub. Vuelve luego."}, "gen": {"loading": "Cargando proyecto…", "notfound": "¡Proyecto no encontrado! Revisa el nombre.", "stars": "Estrellas", "lang": "Lenguaje", "updated": "Actualizado", "readme": "📖 Sobre el proyecto (del README)", "open": "Abrir en GitHub ↗"}, common: {
+es: { dir: "ltr", "auto": {"eye": "🔴 En vivo desde GitHub", "ta": "Lo último, ", "tb": "automático", "sub": "Cada repo nuevo que cree aparece aquí solo — sin tocar el sitio.", "loading": "Obteniendo repos de GitHub…", "fail": "No se pudo obtener de GitHub. Vuelve luego."}, "gen": {"loading": "Cargando proyecto…", "notfound": "¡Proyecto no encontrado! Revisa el nombre.", "stars": "Estrellas", "lang": "Lenguaje", "updated": "Actualizado", "readme": "📖 Sobre el proyecto (del README)", "open": "Abrir en GitHub ↗"}, common: { skip: "Saltar al contenido", menu: "Menú", 
 nav_home: "Inicio", nav_projects: "Proyectos", nav_about: "Sobre mí", nav_skills: "Habilidades", nav_contact: "Contacto",
 nav_github: "★ GitHub", gh_proj: "★ GitHub del proyecto", back: "← Volver a todos los proyectos",
 feat: "✨ Características", inst: "🚀 Instalación", prev: "← Proyecto anterior", next: "Proyecto siguiente →",
@@ -132,7 +132,7 @@ s3t: "Pago", s3d: "Precio del admin → transferencia → comprobante → aproba
 s4t: "Panel admin", s4d: "Entra con admin / 1234 — estados, precios, tarjetas y comprobantes." }
 } },
 
-fr: { dir: "ltr", "auto": {"eye": "🔴 En direct de GitHub", "ta": "Le plus récent, ", "tb": "automatique", "sub": "Chaque nouveau dépôt apparaît ici tout seul — sans toucher au site.", "loading": "Récupération des dépôts…", "fail": "Échec de récupération. Revenez plus tard."}, "gen": {"loading": "Chargement du projet…", "notfound": "Projet introuvable ! Vérifiez le nom.", "stars": "Étoiles", "lang": "Langage", "updated": "Mis à jour", "readme": "📖 Présentation (tirée du README)", "open": "Ouvrir sur GitHub ↗"}, common: {
+fr: { dir: "ltr", "auto": {"eye": "🔴 En direct de GitHub", "ta": "Le plus récent, ", "tb": "automatique", "sub": "Chaque nouveau dépôt apparaît ici tout seul — sans toucher au site.", "loading": "Récupération des dépôts…", "fail": "Échec de récupération. Revenez plus tard."}, "gen": {"loading": "Chargement du projet…", "notfound": "Projet introuvable ! Vérifiez le nom.", "stars": "Étoiles", "lang": "Langage", "updated": "Mis à jour", "readme": "📖 Présentation (tirée du README)", "open": "Ouvrir sur GitHub ↗"}, common: { skip: "Aller au contenu", menu: "Menu", 
 nav_home: "Accueil", nav_projects: "Projets", nav_about: "À propos", nav_skills: "Compétences", nav_contact: "Contact",
 nav_github: "★ GitHub", gh_proj: "★ GitHub du projet", back: "← Retour à tous les projets",
 feat: "✨ Fonctionnalités", inst: "🚀 Installation", prev: "← Projet précédent", next: "Projet suivant →",
@@ -264,7 +264,7 @@ s3t: "Paiement", s3d: "Prix de l’admin → virement → reçu → validation."
 s4t: "Panel admin", s4d: "Connectez-vous admin / 1234 — statuts, prix, cartes et reçus." }
 } },
 
-pt: { dir: "ltr", "auto": {"eye": "🔴 Ao vivo do GitHub", "ta": "Novidades, ", "tb": "automático", "sub": "Todo repo novo que eu criar aparece aqui sozinho.", "loading": "Buscando repos…", "fail": "Não foi possível buscar agora. Volte depois."}, "gen": {"loading": "Carregando projeto…", "notfound": "Projeto não encontrado! Confira o nome.", "stars": "Estrelas", "lang": "Linguagem", "updated": "Atualizado", "readme": "📖 Sobre o projeto (do README)", "open": "Abrir no GitHub ↗"}, common: {
+pt: { dir: "ltr", "auto": {"eye": "🔴 Ao vivo do GitHub", "ta": "Novidades, ", "tb": "automático", "sub": "Todo repo novo que eu criar aparece aqui sozinho.", "loading": "Buscando repos…", "fail": "Não foi possível buscar agora. Volte depois."}, "gen": {"loading": "Carregando projeto…", "notfound": "Projeto não encontrado! Confira o nome.", "stars": "Estrelas", "lang": "Linguagem", "updated": "Atualizado", "readme": "📖 Sobre o projeto (do README)", "open": "Abrir no GitHub ↗"}, common: { skip: "Pular para o conteúdo", menu: "Menu", 
 nav_home: "Início", nav_projects: "Projetos", nav_about: "Sobre mim", nav_skills: "Habilidades", nav_contact: "Contato",
 nav_github: "★ GitHub", gh_proj: "★ GitHub do projeto", back: "← Voltar a todos os projetos",
 feat: "✨ Recursos", inst: "🚀 Instalação", prev: "← Projeto anterior", next: "Próximo projeto →",
@@ -396,7 +396,7 @@ s3t: "Pagamento", s3d: "Preço do admin → transferência → comprovante → a
 s4t: "Painel admin", s4d: "Entre com admin / 1234 — status, preços, cartões e comprovantes." }
 } },
 
-de: { dir: "ltr", "auto": {"eye": "🔴 Live von GitHub", "ta": "Neuestes, ", "tb": "automatisch", "sub": "Jedes neue Repo erscheint hier von allein.", "loading": "Repos werden geladen…", "fail": "Gerade nicht abrufbar. Später erneut versuchen."}, "gen": {"loading": "Projekt wird geladen…", "notfound": "Projekt nicht gefunden! Namen prüfen.", "stars": "Sterne", "lang": "Sprache", "updated": "Aktualisiert", "readme": "📖 Über das Projekt (aus README)", "open": "Auf GitHub öffnen ↗"}, common: {
+de: { dir: "ltr", "auto": {"eye": "🔴 Live von GitHub", "ta": "Neuestes, ", "tb": "automatisch", "sub": "Jedes neue Repo erscheint hier von allein.", "loading": "Repos werden geladen…", "fail": "Gerade nicht abrufbar. Später erneut versuchen."}, "gen": {"loading": "Projekt wird geladen…", "notfound": "Projekt nicht gefunden! Namen prüfen.", "stars": "Sterne", "lang": "Sprache", "updated": "Aktualisiert", "readme": "📖 Über das Projekt (aus README)", "open": "Auf GitHub öffnen ↗"}, common: { skip: "Zum Inhalt springen", menu: "Menü", 
 nav_home: "Start", nav_projects: "Projekte", nav_about: "Über mich", nav_skills: "Skills", nav_contact: "Kontakt",
 nav_github: "★ GitHub", gh_proj: "★ GitHub des Projekts", back: "← Zurück zu allen Projekten",
 feat: "✨ Funktionen", inst: "🚀 Installation", prev: "← Vorheriges Projekt", next: "Nächstes Projekt →",
@@ -528,7 +528,7 @@ s3t: "Zahlung", s3d: "Preis vom Admin → Überweisung → Beleg → Freigabe.",
 s4t: "Admin-Panel", s4d: "Login admin / 1234 — Status, Preise, Karten und Belege." }
 } },
 
-it: { dir: "ltr", "auto": {"eye": "🔴 Live da GitHub", "ta": "Novità, ", "tb": "automatico", "sub": "Ogni nuovo repo che creo appare qui da solo.", "loading": "Recupero repo…", "fail": "Recupero fallito. Riprova dopo."}, "gen": {"loading": "Caricamento progetto…", "notfound": "Progetto non trovato! Controlla il nome.", "stars": "Stelle", "lang": "Linguaggio", "updated": "Aggiornato", "readme": "📖 Il progetto (dal README)", "open": "Apri su GitHub ↗"}, common: {
+it: { dir: "ltr", "auto": {"eye": "🔴 Live da GitHub", "ta": "Novità, ", "tb": "automatico", "sub": "Ogni nuovo repo che creo appare qui da solo.", "loading": "Recupero repo…", "fail": "Recupero fallito. Riprova dopo."}, "gen": {"loading": "Caricamento progetto…", "notfound": "Progetto non trovato! Controlla il nome.", "stars": "Stelle", "lang": "Linguaggio", "updated": "Aggiornato", "readme": "📖 Il progetto (dal README)", "open": "Apri su GitHub ↗"}, common: { skip: "Salta al contenuto", menu: "Menu", 
 nav_home: "Home", nav_projects: "Progetti", nav_about: "Chi sono", nav_skills: "Competenze", nav_contact: "Contatti",
 nav_github: "★ GitHub", gh_proj: "★ GitHub del progetto", back: "← Torna a tutti i progetti",
 feat: "✨ Funzionalità", inst: "🚀 Installazione", prev: "← Progetto precedente", next: "Progetto successivo →",

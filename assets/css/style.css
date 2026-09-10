@@ -1,5 +1,5 @@
 /* Alvandcode v2 — Dark 3D Glass Theme (RTL) */
-@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;700;800;900&display=swap');
+/* font: loaded via <link> in <head> (faster than @import) — Vazirmatn 400/700/800/900 */
 :root{
   --bg:#06060d; --bg2:#0b0b18; --card:rgba(255,255,255,.055);
   --bd:rgba(255,255,255,.09); --txt:#e8eaf2; --mut:#9aa0b8;
@@ -218,3 +218,8 @@ footer{border-top:1px solid var(--bd);padding:44px 0 30px;background:rgba(5,5,12
 .about-card{background:linear-gradient(180deg,#14142a,#0b0b18)}
 .marquee{background:rgba(8,8,16,.94)}
 .contact-box{background:linear-gradient(160deg,rgba(22,22,46,.97),rgba(30,20,52,.95))}
+
+/* skip-to-content link (screen readers + keyboard) */
+.skip{position:fixed;top:-70px;right:16px;z-index:300;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-weight:800;font-size:.85rem;padding:10px 20px;border-radius:12px;transition:top .25s;text-decoration:none}
+.skip:focus{top:12px;color:#fff}
+html[dir="ltr"] .skip{right:auto;left:16px}

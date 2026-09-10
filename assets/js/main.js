@@ -125,4 +125,43 @@
     navAs.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+e.target.id);});
   }});},{rootMargin:'-40% 0px -55% 0px'});
   secs.forEach(function(s){io4.observe(s);});
+
+  // lazy-load the heavy 3D background after first paint (faster initial load)
+  function loadThree(){
+    if(window.THREE) return;
+    try{
+      if(matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      if(navigator.connection && navigator.connection.saveData) return;
+      var c=document.createElement('canvas');
+      if(!(c.getContext('webgl') || c.getContext('experimental-webgl'))) return;
+    }catch(e){ return; }
+    var heroSrc='assets/js/three-hero.js';
+    try{
+      document.querySelectorAll('script[src]').forEach(function(s){
+        var u=s.getAttribute('src')||'';
+        if(u.slice(-7)==='main.js') heroSrc=u.slice(0,-7)+'three-hero.js';
+      });
+    }catch(e){}
+    function js(src,cb){var s=document.createElement('script');s.src=src;s.async=true;s.onload=cb||function(){};s.onerror=function(){};document.body.appendChild(s);}
+    js('https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js',function(){
+      js(heroSrc,null);
+    });
+  }
+  function idleRun(fn){
+    try{
+      if('requestIdleCallback' in window) requestIdleCallback(fn,{timeout:2500});
+      else setTimeout(fn,1200);
+    }catch(e){ setTimeout(fn,1200); }
+  }
+  if(document.readyState==='complete') idleRun(loadThree);
+  else window.addEventListener('load',function(){idleRun(loadThree);});
+
+  // offline cache: register service worker (safe: pages are network-first)
+  try{
+    if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
+      window.addEventListener('load',function(){
+        navigator.serviceWorker.register('/sw.js').catch(function(){});
+      });
+    }
+  }catch(e){}
 })();
