@@ -1,6 +1,6 @@
 /* Alvandcode i18n — batch 3: Turkish, Russian, Indonesian, Vietnamese, Japanese, Korean */
 window.I18N = Object.assign(window.I18N || {}, {
-tr: { dir: "ltr", common: {
+tr: { dir: "ltr", "auto": {"eye": "🔴 GitHub’dan canlı", "ta": "En yeniler, ", "tb": "otomatik", "sub": "Açtığım her yeni repo buraya kendiliğinden gelir.", "loading": "Repolar alınıyor…", "fail": "Şu an alınamadı. Sonra tekrar bak."}, "gen": {"loading": "Proje yükleniyor…", "notfound": "Proje bulunamadı! Adı kontrol et.", "stars": "Yıldız", "lang": "Dil", "updated": "Güncellendi", "readme": "📖 Proje tanıtımı (README’den)", "open": "GitHub’da aç ↗"}, common: {
 nav_home: "Ana Sayfa", nav_projects: "Projeler", nav_about: "Hakkımda", nav_skills: "Yetenekler", nav_contact: "İletişim",
 nav_github: "★ GitHub", gh_proj: "★ Projenin GitHub’ı", back: "← Tüm projelere dön",
 feat: "✨ Özellikler", inst: "🚀 Kurulum", prev: "← Önceki proje", next: "Sonraki proje →",
@@ -132,7 +132,7 @@ s3t: "Ödeme", s3d: "Admin fiyatı → havale → fiş → onay.",
 s4t: "Admin paneli", s4d: "admin / 1234 ile giriş — durum, fiyat, kart ve fişler." }
 } },
 
-ru: { dir: "ltr", common: {
+ru: { dir: "ltr", "auto": {"eye": "🔴 Вживую с GitHub", "ta": "Новое, ", "tb": "автоматически", "sub": "Каждый новый репозиторий появляется здесь сам.", "loading": "Загрузка репозиториев…", "fail": "Не удалось получить. Зайдите позже."}, "gen": {"loading": "Загрузка проекта…", "notfound": "Проект не найден! Проверьте имя.", "stars": "Звёзды", "lang": "Язык", "updated": "Обновлён", "readme": "📖 О проекте (из README)", "open": "Открыть на GitHub ↗"}, common: {
 nav_home: "Главная", nav_projects: "Проекты", nav_about: "Обо мне", nav_skills: "Навыки", nav_contact: "Контакты",
 nav_github: "★ GitHub", gh_proj: "★ GitHub проекта", back: "← Назад ко всем проектам",
 feat: "✨ Возможности", inst: "🚀 Установка", prev: "← Предыдущий проект", next: "Следующий проект →",
@@ -264,7 +264,7 @@ s3t: "Оплата", s3d: "Цена админа → перевод → чек �
 s4t: "Админ-панель", s4d: "Вход admin / 1234 — статусы, цены, карты и чеки." }
 } },
 
-id: { dir: "ltr", common: {
+id: { dir: "ltr", "auto": {"eye": "🔴 Live dari GitHub", "ta": "Terbaru, ", "tb": "otomatis", "sub": "Setiap repo baru yang saya buat muncul di sini sendiri.", "loading": "Mengambil repo…", "fail": "Gagal mengambil. Coba lagi nanti."}, "gen": {"loading": "Memuat proyek…", "notfound": "Proyek tidak ditemukan! Cek namanya.", "stars": "Bintang", "lang": "Bahasa", "updated": "Diperbarui", "readme": "📖 Tentang proyek (dari README)", "open": "Buka di GitHub ↗"}, common: {
 nav_home: "Beranda", nav_projects: "Proyek", nav_about: "Tentang", nav_skills: "Keahlian", nav_contact: "Kontak",
 nav_github: "★ GitHub", gh_proj: "★ GitHub proyek", back: "← Kembali ke semua proyek",
 feat: "✨ Fitur", inst: "🚀 Instalasi", prev: "← Proyek sebelumnya", next: "Proyek berikutnya →",
@@ -396,7 +396,7 @@ s3t: "Bayar", s3d: "Harga admin → transfer → bukti → setujui.",
 s4t: "Panel admin", s4d: "Masuk admin / 1234 — status, harga, kartu & bukti." }
 } },
 
-vi: { dir: "ltr", common: {
+vi: { dir: "ltr", "auto": {"eye": "🔴 Trực tiếp từ GitHub", "ta": "Mới nhất, ", "tb": "tự động", "sub": "Repo mới nào tôi tạo cũng tự hiện ở đây.", "loading": "Đang lấy repo…", "fail": "Chưa lấy được. Quay lại sau nhé."}, "gen": {"loading": "Đang tải dự án…", "notfound": "Không thấy dự án! Kiểm tra tên nhé.", "stars": "Sao", "lang": "Ngôn ngữ", "updated": "Cập nhật", "readme": "📖 Giới thiệu (từ README)", "open": "Mở trên GitHub ↗"}, common: {
 nav_home: "Trang chủ", nav_projects: "Dự án", nav_about: "Về tôi", nav_skills: "Kỹ năng", nav_contact: "Liên hệ",
 nav_github: "★ GitHub", gh_proj: "★ GitHub dự án", back: "← Về tất cả dự án",
 feat: "✨ Tính năng", inst: "🚀 Cài đặt", prev: "← Dự án trước", next: "Dự án tiếp →",
@@ -528,7 +528,7 @@ s3t: "Trả tiền", s3d: "Giá admin → chuyển khoản → biên lai → duy
 s4t: "Bảng admin", s4d: "Đăng nhập admin / 1234 — trạng thái, giá, thẻ & biên lai." }
 } },
 
-ja: { dir: "ltr", common: {
+ja: { dir: "ltr", "auto": {"eye": "🔴 GitHubライブ", "ta": "最新作、", "tb": "自動取得", "sub": "作ったリポジトリは自動でここに並びます。", "loading": "取得中…", "fail": "取得できませんでした。また後で。"}, "gen": {"loading": "読み込み中…", "notfound": "見つかりません!名前を確認してね。", "stars": "スター", "lang": "言語", "updated": "更新日", "readme": "📖 紹介(READMEより)", "open": "GitHubで開く ↗"}, common: {
 nav_home: "ホーム", nav_projects: "プロジェクト", nav_about: "自己紹介", nav_skills: "スキル", nav_contact: "連絡先",
 nav_github: "★ GitHub", gh_proj: "★ プロジェクトのGitHub", back: "← すべてのプロジェクトに戻る",
 feat: "✨ 機能", inst: "🚀 インストール", prev: "← 前のプロジェクト", next: "次のプロジェクト →",
@@ -660,7 +660,7 @@ s3t: "お支払い", s3d: "金額提示 → 振込 → 領収書 → 承認。",
 s4t: "管理画面", s4d: "admin / 1234でログイン — 状態、金額、カード、領収書。" }
 } },
 
-ko: { dir: "ltr", common: {
+ko: { dir: "ltr", "auto": {"eye": "🔴 GitHub 실시간", "ta": "최신작, ", "tb": "자동", "sub": "새 리포를 만들면 여기 자동 표시됩니다.", "loading": "가져오는 중…", "fail": "가져오기 실패. 나중에 다시 보세요."}, "gen": {"loading": "불러오는 중…", "notfound": "프로젝트 없음! 이름을 확인하세요.", "stars": "스타", "lang": "언어", "updated": "업데이트", "readme": "📖 소개(README에서)", "open": "GitHub에서 열기 ↗"}, common: {
 nav_home: "홈", nav_projects: "프로젝트", nav_about: "소개", nav_skills: "기술", nav_contact: "연락처",
 nav_github: "★ GitHub", gh_proj: "★ 프로젝트 GitHub", back: "← 모든 프로젝트로 돌아가기",
 feat: "✨ 기능", inst: "🚀 설치", prev: "← 이전 프로젝트", next: "다음 프로젝트 →",

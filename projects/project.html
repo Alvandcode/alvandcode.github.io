@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" data-theme="dark" data-lang="fa">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>پروژه | الوند کد</title>
+<meta name="description" content="معرفی زنده پروژه از گیت‌هاب — Alvandcode">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="stylesheet" href="../assets/css/theme.css">
+<style>:root{--accent:#6366f1;--accent2:#22d3ee}</style>
+</head>
+<body>
+<div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
+<canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
+<header id="siteHeader"><nav class="nav">
+<a class="logo" href="../index.html"><img class="logo-img" src="../assets/img/logo.png" alt="Alvandcode"><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home" data-i18n="common.nav_home">خانه</a><a href="../index.html#projects" class="active" data-i18n="common.nav_projects">پروژه‌ها</a><a href="../index.html#about" data-i18n="common.nav_about">درباره</a><a href="../index.html#contact" data-i18n="common.nav_contact">تماس</a></div>
+<div class="nav-tools">
+<select class="lang-sel" aria-label="language"></select>
+<button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode" target="_blank" data-i18n="common.gh_proj">★ گیت‌هاب پروژه</a>
+</div>
+</nav></header>
+<div class="wrap">
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex" data-i18n="common.back">→ بازگشت به همه پروژه‌ها</a>
+<div id="gen-loading" class="shot" style="margin-top:18px"><div class="shot-body"><p style="color:var(--mut)" data-i18n="gen.loading">در حال بارگذاری…</p></div></div>
+<div id="gen-wrap" style="display:none">
+<div class="proj-hero"><div>
+<div class="proj-icon" id="gen-icon">📦</div>
+<h1 class="ltr" id="gen-title" style="font-size:clamp(1.8rem,4.5vw,3rem);font-weight:900;margin-top:20px;word-break:break-word">…</h1>
+<p class="sub" id="gen-desc">…</p>
+<div class="hero-stats" style="margin-top:18px">
+<div class="stat"><b id="gen-stars">★ 0</b><span data-i18n="gen.stars">استار</span></div>
+<div class="stat"><b id="gen-lang" style="font-size:1.1rem">—</b><span data-i18n="gen.lang">زبان</span></div>
+<div class="stat"><b id="gen-date" class="ltr" style="font-size:1.05rem">—</b><span data-i18n="gen.updated">آخرین آپدیت</span></div>
+</div>
+<div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:8px">
+<a class="btn btn-p" id="gen-open" href="https://github.com/Alvandcode" target="_blank" data-i18n="gen.open">باز کردن در گیت‌هاب ↗</a>
+</div>
+<div class="code" style="margin-top:18px"><button class="cp" id="gen-copy" data-i18n="common.copy">کپی</button><span id="gen-clone">git clone …</span></div>
+</div>
+<h2 class="reveal in" style="margin-bottom:14px" data-i18n="gen.readme">📖 معرفی پروژه</h2>
+<div class="shot"><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">README.md — live</span></div>
+<div class="shot-body"><div class="md-body" id="gen-readme" dir="auto"><p style="color:var(--mut)">…</p></div></div></div>
+</div>
+</div>
+<footer style="margin-top:60px"><div class="wrap f-row">
+<a class="logo" href="../index.html"><img class="logo-img" style="width:36px;height:36px;border-radius:11px" src="../assets/img/logo.png" alt="Alvandcode"><span><b data-i18n="home.f_name">الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects" data-i18n="common.f_projects">پروژه‌ها</a><a href="https://github.com/Alvandcode" target="_blank">GitHub</a><a href="https://t.me/a_c_official" target="_blank">Telegram</a></div>
+</div>
+<div class="wrap legal" style="margin-top:18px"><p class="legal-warn" data-i18n="home.legal2">…</p></div>
+</footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/marked@12/marked.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+<script src="../assets/js/i18n1.js"></script>
+<script src="../assets/js/i18n2.js"></script>
+<script src="../assets/js/i18n3.js"></script>
+<script src="../assets/js/lang.js"></script>
+<script src="../assets/js/three-hero.js"></script>
+<script src="../assets/js/main.js"></script>
+<script src="../assets/js/project.js"></script>
+</body></html>
