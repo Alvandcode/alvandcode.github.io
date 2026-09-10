@@ -29,8 +29,8 @@
 
   // 3D tilt
   function tilt(card,max){
-    var r=card.getBoundingClientRect();
     card.addEventListener('mousemove',function(ev){
+      var r=card.getBoundingClientRect();
       var x=(ev.clientX-r.left)/r.width-.5, y=(ev.clientY-r.top)/r.height-.5;
       card.style.transform='perspective(900px) rotateY('+(x*(max||12))+'deg) rotateX('+(-y*(max||12))+'deg) translateY(-6px)';
     });

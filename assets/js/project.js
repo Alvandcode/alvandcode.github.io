@@ -59,7 +59,7 @@
           setTimeout(function(){ btn.textContent = tr("common.copy") || ""; }, 1400);
         });
       });
-      var branches = ["main", "master"];
+      var branches = [r.default_branch || "main", "main", "master"].filter(function(v, i, a){ return a.indexOf(v) === i; });
       (function next(i){
         if (i >= branches.length){
           $("gen-readme").innerHTML = "<p style='color:var(--mut)'>—</p>";

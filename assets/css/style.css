@@ -124,9 +124,16 @@ h1.hero-t{font-size:clamp(2.6rem,6vw,4.6rem);font-weight:900;line-height:1.25}
 .gh{font-size:.8rem;color:var(--mut)}.gh:hover{color:#fff}
 
 /* marquee */
-.marquee{overflow:hidden;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:rgba(255,255,255,.02);padding:15px 0;white-space:nowrap}
-.marquee div{display:inline-block;animation:mq 26s linear infinite;font-weight:700;color:#8b90ad;font-size:.92rem}
-@keyframes mq{to{transform:translateX(50%)}}
+.marquee{overflow:hidden;border-top:1px solid var(--bd);border-bottom:1px solid var(--bd);background:rgba(255,255,255,.02);padding:15px 0;white-space:nowrap;direction:ltr}
+.marquee div{display:inline-block;animation:mq 26s linear infinite;font-weight:700;color:#8b90ad;font-size:.92rem;will-change:transform}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* accessibility: visible keyboard focus + reduced motion */
+:focus-visible{outline:2px solid var(--p);outline-offset:3px}
+@media (prefers-reduced-motion:reduce){
+*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+#bg3d{display:none}
+}
 
 /* about */
 .about{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:start}
