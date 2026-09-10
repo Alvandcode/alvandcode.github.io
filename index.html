@@ -1,363 +1,223 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>الوند کد | Alvandcode</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700&family=Inter:wght@400;500;600&display=swap');
-        
-        .tail-container {
-            font-family: 'Vazirmatn', system-ui, sans-serif;
-        }
-        
-        .hero-bg {
-            background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%);
-        }
-        
-        .project-card {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        
-        .project-card:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(99 102 241 / 0.4);
-        }
-        
-        .nav-link {
-            position: relative;
-            transition: color 0.3s ease;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -6px;
-            left: 0;
-            background-color: #6366f1;
-            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        
-        .glass {
-            background: rgba(255, 255, 255, 0.07);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الوند کد | توسعه‌دهنده نرم‌افزار — Alvandcode</title>
+<meta name="description" content="الوند کد — توسعه‌دهنده ابزارهای امنیتی، شبکه، OCR و اپ‌های اندروید و ویندوز. ۹ پروژه متن‌باز با صفحات اختصاصی.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='24' fill='%236366f1'/><text x='50' y='72' font-size='58' text-anchor='middle' fill='white' font-family='sans-serif' font-weight='bold'>A</text></svg>">
 </head>
-<body class="tail-container bg-zinc-950 text-zinc-200">
+<body>
+<canvas id="bg3d"></canvas>
+<div class="bg-grid"></div>
+<div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+<div id="glow"></div>
 
-    <!-- Professional Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 glass border-b border-white/5">
-        <div class="max-w-7xl mx-auto px-8 py-6 flex items-center justify-between">
-            <div class="flex items-center gap-4">
-                <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 via-violet-600 to-purple-600 rounded-2xl flex items-center justify-center text-white font-bold text-3xl shadow-inner">A</div>
-                <div>
-                    <span class="text-2xl font-bold tracking-tighter">الوند کد</span>
-                    <span class="block text-[10px] text-zinc-500 -mt-1 tracking-[1px]">ALVANDCODE</span>
-                </div>
-            </div>
-            
-            <div class="hidden md:flex items-center gap-10 text-sm font-medium">
-                <a href="#home" class="nav-link text-zinc-300 hover:text-white">خانه</a>
-                <a href="#about" class="nav-link text-zinc-300 hover:text-white">درباره من</a>
-                <a href="#projects" class="nav-link text-zinc-300 hover:text-white">پروژه‌ها</a>
-                <a href="#skills" class="nav-link text-zinc-300 hover:text-white">مهارت‌ها</a>
-                <a href="#contact" class="nav-link text-zinc-300 hover:text-white">تماس با من</a>
-            </div>
-            
-            <div class="flex items-center gap-3">
-                <a href="https://github.com/Alvandcode" target="_blank" 
-                   class="flex items-center gap-2.5 bg-zinc-900 hover:bg-zinc-800 border border-zinc-700 hover:border-zinc-500 px-6 py-3 rounded-2xl text-sm font-medium transition-all">
-                    <i class="fab fa-github"></i>
-                    <span class="hidden sm:inline">گیت‌هاب</span>
-                </a>
-            </div>
+<header id="siteHeader">
+  <nav class="nav">
+    <a class="logo" href="#home"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
+    <div class="links">
+      <a href="#home" class="active">خانه</a>
+      <a href="#projects">پروژه‌ها</a>
+      <a href="#about">درباره من</a>
+      <a href="#skills">مهارت‌ها</a>
+      <a href="#contact">تماس</a>
+    </div>
+    <div style="display:flex;gap:10px;align-items:center">
+      <a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode" target="_blank">★ گیت‌هاب</a>
+      <button class="burger" id="burger">☰</button>
+    </div>
+  </nav>
+</header>
+<div class="mobile-menu" id="mmenu">
+  <a href="#home">خانه</a><a href="#projects">پروژه‌ها</a><a href="#about">درباره من</a><a href="#skills">مهارت‌ها</a><a href="#contact">تماس</a>
+</div>
+
+<!-- HERO -->
+<section id="home" style="padding-top:0">
+<div class="wrap hero">
+  <div>
+    <span class="eyebrow"><span class="dot"></span> توسعه‌دهنده نرم‌افزار • متن‌باز</span>
+    <h1 class="hero-t">الوند <span class="grad">کد</span><br>می‌سازم، نه فقط کدنویسی</h1>
+    <p class="sub" style="margin-top:16px">تخصص من ساخت <b style="color:#fff" id="typing">ابزارهای امنیتی</b><span class="caret"></span> است — از اسکنر اندروید و بنچمارک DNS تا OCR فارسی، استگانوگرافی و مدیریت گیم‌نت. هر پروژه یک صفحه اختصاصی با آموزش نصب دارد.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-p">🚀 مشاهده ۹ پروژه</a>
+      <a href="https://github.com/Alvandcode" target="_blank" class="btn btn-g">★ github.com/Alvandcode</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b data-count="9">0</b><span>پروژه فعال</span></div>
+      <div class="stat"><b data-count="25" data-suffix="+">0</b><span>استار گیت‌هاب</span></div>
+      <div class="stat"><b data-count="6">0</b><span>زبان و پلتفرم</span></div>
+      <div class="stat"><b>۱۰۰٪</b><span>متن‌باز</span></div>
+    </div>
+  </div>
+  <div class="stage">
+    <div class="cube-wrap">
+      <div class="cube-card">
+        <div class="term"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="margin-right:8px">alvand@github — zsh</span></div>
+        <div class="term-body">
+          <div><span class="t-g">$</span> <span class="t-b">whoami</span></div>
+          <div class="t-p">→ alvandcode — builder of useful tools</div>
+          <div><span class="t-g">$</span> <span class="t-b">ls projects/</span></div>
+          <div class="t-y">android-scanner/  dns-benchmark/  ocr-stt/</div>
+          <div class="t-y">stegasuite/  receiptvision/  gamenet-pro/</div>
+          <div><span class="t-g">$</span> <span class="t-b">./ship --open-source</span> <span class="caret"></span></div>
+          <div class="t-m">✓ 9 projects deployed to GitHub Pages</div>
         </div>
-    </nav>
+      </div>
+      <div class="float-chip chip1">🛡️ <span>امنیت اندروید</span></div>
+      <div class="float-chip chip2">⚡ <span>DNS Benchmark</span></div>
+      <div class="float-chip chip3">🎮 <span>GameNet Pro</span></div>
+    </div>
+  </div>
+</div>
+<div class="scroll-hint"><div class="mouse"></div><span>اسکرول کن — سه‌بعدی حرکت می‌کند</span></div>
+</section>
 
-    <!-- Hero -->
-    <section id="home" class="hero-bg min-h-screen flex items-center pt-20">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 bg-white/10 text-white text-sm px-6 py-2.5 rounded-3xl border border-white/20">
-                    <div class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
-                    توسعه‌دهنده نرم‌افزار
-                </div>
-                
-                <h1 class="text-6xl md:text-7xl font-bold leading-tight tracking-tighter">
-                    الوند <span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">کد</span>
-                </h1>
-                
-                <p class="text-xl text-zinc-400 max-w-lg">
-                    توسعه‌دهنده با تمرکز بر ایجاد ابزارهای کاربردی، راه‌حل‌های امنیتی و پروژه‌های متن‌باز.
-                </p>
-                
-                <div class="flex flex-wrap gap-4">
-                    <a href="#projects" 
-                       class="px-8 py-4 bg-white text-zinc-900 font-semibold rounded-3xl flex items-center gap-3 hover:scale-105 transition-all">
-                        مشاهده پروژه‌ها
-                    </a>
-                    <a href="https://github.com/Alvandcode" target="_blank"
-                       class="px-8 py-4 border border-white/30 hover:border-white/60 font-medium rounded-3xl flex items-center gap-3 transition-all">
-                        <i class="fab fa-github"></i>
-                        <span>گیت‌هاب</span>
-                    </a>
-                </div>
-            </div>
-            
-            <div class="relative flex justify-center">
-                <div class="relative w-80 h-80 md:w-96 md:h-96">
-                    <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/30 to-violet-500/30 rounded-[4rem] rotate-6"></div>
-                    <div class="absolute inset-0 bg-zinc-900 rounded-[3.5rem] p-4 shadow-2xl">
-                        <div class="w-full h-full bg-zinc-800 rounded-3xl overflow-hidden relative">
-                            <img src="https://picsum.photos/id/64/800/800" alt="Alvandcode" 
-                                 class="w-full h-full object-cover grayscale-[0.6]">
-                            <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="marquee"><div> PYTHON ◆ ANDROID SECURITY ◆ DNS BENCHMARK ◆ OCR + STT ◆ STEGANOGRAPHY ◆ SPRING BOOT ◆ FLUTTER ◆ ELECTRON ◆ DOCKER ◆ OPEN SOURCE ◆&nbsp;&nbsp;PYTHON ◆ ANDROID SECURITY ◆ DNS BENCHMARK ◆ OCR + STT ◆ STEGANOGRAPHY ◆ SPRING BOOT ◆ FLUTTER ◆ ELECTRON ◆ DOCKER ◆ OPEN SOURCE ◆ </div></div>
 
-    <!-- About -->
-    <section id="about" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-16 items-center">
-                <div class="md:col-span-5">
-                    <div class="sticky top-28">
-                        <span class="text-indigo-400 font-medium tracking-widest text-sm">درباره من</span>
-                        <h2 class="text-5xl font-bold mt-3 leading-none">الوند کد</h2>
-                        <div class="h-1 w-16 bg-indigo-500 mt-6"></div>
-                    </div>
-                </div>
-                
-                <div class="md:col-span-7 space-y-8 text-lg text-zinc-300">
-                    <p>
-                        توسعه‌دهنده نرم‌افزار با تجربه در ساخت ابزارهای کاربردی و پروژه‌های متن‌باز. 
-                        تمرکز اصلی بر زبان پایتون و توسعه ابزارهای امنیتی، پردازش داده و وب است.
-                    </p>
-                    <p>
-                        بیش از ۲۰ پروژه متن‌باز در گیت‌هاب منتشر شده است که شامل اسکنرهای امنیتی، ابزارهای بنچمارک و پردازش تصویر می‌شود.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- PROJECTS -->
+<section id="projects">
+<div class="wrap">
+  <div class="sec-head reveal">
+    <div><span class="eyebrow">💼 نمونه‌کارها</span><h2>۹ پروژه، <span class="grad">۹ دنیای متفاوت</span></h2>
+    <p>روی هر کارت کلیک کن تا وارد صفحه اختصاصی پروژه شوی — معرفی کامل، ویژگی‌ها، آموزش نصب و لینک گیت‌هاب.</p></div>
+    <a class="more" href="https://github.com/Alvandcode?tab=repositories" target="_blank">همه ریپوها در گیت‌هاب ←</a>
+  </div>
+  <div class="grid3">
 
-    <!-- Projects -->
-    <section id="projects" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <span class="text-indigo-400 font-medium">پروژه‌ها</span>
-                    <h2 class="text-5xl font-bold mt-2">پروژه‌های منتخب</h2>
-                </div>
-                <a href="https://github.com/Alvandcode" target="_blank" 
-                   class="text-zinc-400 hover:text-white flex items-center gap-2 group">
-                    همه پروژه‌ها 
-                    <span class="text-xl group-hover:translate-x-1 transition">→</span>
-                </a>
-            </div>
-            
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div class="project-card glass rounded-3xl overflow-hidden">
-                    <div class="h-56 bg-gradient-to-br from-purple-900 to-indigo-900 flex items-center justify-center relative">
-                        <div class="text-7xl opacity-75">📱</div>
-                        <div class="absolute top-4 right-4 bg-black/60 text-xs px-3 py-1 rounded-full">Python</div>
-                    </div>
-                    <div class="p-7">
-                        <h3 class="font-bold text-xl mb-2">Android Security Scanner</h3>
-                        <p class="text-zinc-400 text-sm line-clamp-3">
-                            اسکنر امنیتی اندروید با رویکرد heuristic برای تشخیص ویروس و بدافزار
-                        </p>
-                        <div class="mt-6 flex justify-between items-center">
-                            <span class="text-xs bg-zinc-800 px-4 py-2 rounded-2xl">امنیت</span>
-                            <a href="https://github.com/Alvandcode/android-security-scanner" target="_blank" 
-                               class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">گیت‌هاب →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card glass rounded-3xl overflow-hidden">
-                    <div class="h-56 bg-gradient-to-br from-amber-900 to-orange-900 flex items-center justify-center relative">
-                        <div class="text-7xl opacity-75">⚡</div>
-                        <div class="absolute top-4 right-4 bg-black/60 text-xs px-3 py-1 rounded-full">Python</div>
-                    </div>
-                    <div class="p-7">
-                        <h3 class="font-bold text-xl mb-2">DNS Benchmark Pro</h3>
-                        <p class="text-zinc-400 text-sm line-clamp-3">
-                            ابزار پیشرفته بنچمارک DNS با پشتیبانی از UDP، DoH و DoT
-                        </p>
-                        <div class="mt-6 flex justify-between items-center">
-                            <span class="text-xs bg-zinc-800 px-4 py-2 rounded-2xl">شبکه</span>
-                            <a href="https://github.com/Alvandcode/dns-benchmark-pro" target="_blank" 
-                               class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">گیت‌هاب →</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card glass rounded-3xl overflow-hidden">
-                    <div class="h-56 bg-gradient-to-br from-cyan-900 to-teal-900 flex items-center justify-center relative">
-                        <div class="text-7xl opacity-75">🔍</div>
-                        <div class="absolute top-4 right-4 bg-black/60 text-xs px-3 py-1 rounded-full">Python</div>
-                    </div>
-                    <div class="p-7">
-                        <h3 class="font-bold text-xl mb-2">OCR + STT Tool</h3>
-                        <p class="text-zinc-400 text-sm line-clamp-3">
-                            ابزار چندسکویی استخراج متن از تصویر و تبدیل صدا به متن
-                        </p>
-                        <div class="mt-6 flex justify-between items-center">
-                            <span class="text-xs bg-zinc-800 px-4 py-2 rounded-2xl">پردازش</span>
-                            <a href="https://github.com/Alvandcode/ocr-stt-tool" target="_blank" 
-                               class="text-indigo-400 hover:text-indigo-300 text-sm font-medium">گیت‌هاب →</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a class="pcard reveal" data-tilt style="--accent:#6366f1;--accent2:#a855f7" href="projects/android-security-scanner.html">
+      <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 4</span><span class="p-emoji">🛡️</span></div>
+      <div class="p-body"><h3>اسکنر امنیت اندروید <small>android-scanner</small></h3><p>آنتی‌ویروس heuristic بدون نیاز به روت؛ اسکن APK، مجوزهای خطرناک و امتیاز ریسک ۰ تا ۱۰۰.</p>
+      <div class="p-tags"><span class="tag">امنیت</span><span class="tag">Termux</span><span class="tag">APKTool</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
 
-    <!-- Skills -->
-    <section id="skills" class="py-24 bg-zinc-900">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-indigo-400 font-medium">مهارت‌ها</span>
-                <h2 class="text-5xl font-bold mt-3">تخصص‌ها</h2>
-            </div>
-            
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">🐍</div>
-                    <div class="font-semibold text-xl">Python</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">🌐</div>
-                    <div class="font-semibold text-xl">HTML / CSS</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">⚡</div>
-                    <div class="font-semibold text-xl">JavaScript</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">☕</div>
-                    <div class="font-semibold text-xl">Java</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">📱</div>
-                    <div class="font-semibold text-xl">Android Security</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">🌐</div>
-                    <div class="font-semibold text-xl">Networking</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">🖼️</div>
-                    <div class="font-semibold text-xl">Image Processing</div>
-                </div>
-                <div class="glass p-8 rounded-3xl text-center hover:scale-105 transition-all">
-                    <div class="text-5xl mb-6">📊</div>
-                    <div class="font-semibold text-xl">Data Processing</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <a class="pcard reveal" data-tilt style="--accent:#f59e0b;--accent2:#ef4444" href="projects/dns-benchmark-pro.html">
+      <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 4</span><span class="p-emoji">⚡</span></div>
+      <div class="p-body"><h3>بنچمارک DNS پرو <small>dns-benchmark</small></h3><p>تست همزمان DNSها با UDP / DoH / DoT، امتیازدهی A+ تا F و خروجی CSV و JSON و HTML.</p>
+      <div class="p-tags"><span class="tag">شبکه</span><span class="tag">Async</span><span class="tag">گزارش‌ساز</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
 
-    <!-- Contact -->
-    <section id="contact" class="py-24 bg-zinc-950">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="text-5xl font-bold mb-6">تماس با من</h2>
-            <p class="text-xl text-zinc-400 mb-12">برای همکاری‌های فنی و پروژه‌های جدید در دسترس هستم.</p>
-            
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto">
-                <a href="https://github.com/Alvandcode" target="_blank"
-                   class="glass p-8 rounded-3xl hover:bg-white/5 transition-all flex flex-col items-center gap-4">
-                    <i class="fab fa-github text-4xl"></i>
-                    <span class="font-medium">گیت‌هاب</span>
-                </a>
-                
-                <a href="https://t.me/a_c_official" target="_blank"
-                   class="glass p-8 rounded-3xl hover:bg-white/5 transition-all flex flex-col items-center gap-4">
-                    <i class="fab fa-telegram text-4xl text-sky-400"></i>
-                    <span class="font-medium">تلگرام</span>
-                </a>
-                
-                <a href="mailto:Alvandcode@atomicmail.io" 
-                   class="glass p-8 rounded-3xl hover:bg-white/5 transition-all flex flex-col items-center gap-4">
-                    <i class="fas fa-envelope text-4xl text-emerald-400"></i>
-                    <span class="font-medium">ایمیل</span>
-                </a>
-            </div>
-            
-            <div class="mt-12">
-                <a href="mailto:Alvandcode@atomicmail.io" 
-                   class="inline-flex items-center gap-3 text-zinc-400 hover:text-white transition">
-                    <i class="fas fa-envelope"></i>
-                    <span>Alvandcode@atomicmail.io</span>
-                </a>
-            </div>
-        </div>
-    </section>
+    <a class="pcard reveal" data-tilt style="--accent:#06b6d4;--accent2:#14b8a6" href="projects/ocr-stt-tool.html">
+      <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 4</span><span class="p-emoji">🔍</span></div>
+      <div class="p-body"><h3>OCR + تبدیل گفتار <small>ocr-stt-tool</small></h3><p>استخراج متن از عکس و PDF و تبدیل صدا به متن فارسی؛ رابط CLI و اپ Kivy موبایل.</p>
+      <div class="p-tags"><span class="tag">هوش مصنوعی</span><span class="tag">Tesseract</span><span class="tag">Kivy</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
 
-    <!-- Professional Footer -->
-    <footer class="bg-zinc-950 border-t border-white/10 py-16">
-        <div class="max-w-7xl mx-auto px-8">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-8">
-                <div class="flex items-center gap-4">
-                    <div class="w-9 h-9 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-2xl flex items-center justify-center text-white font-bold text-2xl">A</div>
-                    <div>
-                        <span class="text-xl font-bold">الوند کد</span>
-                        <p class="text-xs text-zinc-500 mt-0.5">Alvandcode</p>
-                    </div>
-                </div>
+    <a class="pcard reveal" data-tilt style="--accent:#22c55e;--accent2:#06b6d4" href="projects/gamenet-windows-pro.html">
+      <div class="pcard-top"><span class="p-lang">Electron + JS</span><span class="p-stars">★ ویژه</span><span class="p-emoji">🖥️</span></div>
+      <div class="p-body"><h3>گیم‌نت پرو ویندوز <small>gamenet-pro</small></h3><p>مدیریت کامل گیم‌نت: تایمر، بوفه، کیف‌پول، فاکتور PDF، ۲۱ تم و کنترل از راه دور.</p>
+      <div class="p-tags"><span class="tag">دسکتاپ</span><span class="tag">آفلاین</span><span class="tag">PDF</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">صفحه خرید ↗</span></div></div>
+    </a>
 
-                <div class="text-center">
-                    <p class="text-zinc-400 text-sm">
-                        © ۱۴۰۴ الوند کد. تمامی حقوق محفوظ است.
-                    </p>
-                    <p class="text-zinc-500 text-xs mt-1">
-                        طراحی و توسعه توسط Alvandcode
-                    </p>
-                </div>
+    <a class="pcard reveal" data-tilt style="--accent:#a855f7;--accent2:#ec4899" href="projects/stegasuite.html">
+      <div class="pcard-top"><span class="p-lang">Kotlin</span><span class="p-stars">★ 3</span><span class="p-emoji">🕵️</span></div>
+      <div class="p-body"><h3>استگا سوئیت <small>StegaSuite</small></h3><p>مخفی‌کردن هر فایل داخل عکس PNG با رمزنگاری AES-256 و Jetpack Compose؛ کاملا آفلاین.</p>
+      <div class="p-tags"><span class="tag">اندروید</span><span class="tag">AES-256</span><span class="tag">Compose</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
 
-                <div class="flex items-center gap-6 text-2xl">
-                    <a href="https://github.com/Alvandcode" target="_blank" 
-                       class="text-zinc-400 hover:text-white transition-colors">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://t.me/a_c_official" target="_blank" 
-                       class="text-zinc-400 hover:text-sky-400 transition-colors">
-                        <i class="fab fa-telegram"></i>
-                    </a>
-                    <a href="mailto:Alvandcode@atomicmail.io" 
-                       class="text-zinc-400 hover:text-emerald-400 transition-colors">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+    <a class="pcard reveal" data-tilt style="--accent:#3b82f6;--accent2:#6366f1" href="projects/gamenet-manager.html">
+      <div class="pcard-top"><span class="p-lang">Android</span><span class="p-stars">★ 3</span><span class="p-emoji">🎮</span></div>
+      <div class="p-body"><h3>گیم‌نت منیجر اندروید <small>free</small></h3><p>نسخه رایگان موبایل برای مدیریت دستگاه‌ها، مشتریان، زمان و هزینه روی گوشی و تبلت.</p>
+      <div class="p-tags"><span class="tag">موبایل</span><span class="tag">رایگان</span><span class="tag">مدیریت</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
 
-    <script>
-        // Smooth Scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                if (this.getAttribute('href') !== '#') {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
+    <a class="pcard reveal" data-tilt style="--accent:#10b981;--accent2:#84cc16" href="projects/image-metadata-cleaner.html">
+      <div class="pcard-top"><span class="p-lang">Python</span><span class="p-stars">★ 3</span><span class="p-emoji">🧹</span></div>
+      <div class="p-body"><h3>پاک‌کننده متادیتا <small>privacy</small></h3><p>حذف کامل EXIF و GPS از JPG/PNG/WebP با پردازش گروهی، واترمارک و API فلاسک.</p>
+      <div class="p-tags"><span class="tag">حریم خصوصی</span><span class="tag">CLI+API</span><span class="tag">Docker</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
+
+    <a class="pcard reveal" data-tilt style="--accent:#f43f5e;--accent2:#fb923c" href="projects/receiptvision-core.html">
+      <div class="pcard-top"><span class="p-lang">Java Spring</span><span class="p-stars">★ 3</span><span class="p-emoji">🧾</span></div>
+      <div class="p-body"><h3>رسیت‌ویژن <small>ReceiptVision</small></h3><p>سرویس OCR رسید با Spring Boot و Tesseract؛ فقط با یک دستور داکر بالا می‌آید.</p>
+      <div class="p-tags"><span class="tag">بک‌اند</span><span class="tag">Docker</span><span class="tag">OCR</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
+
+    <a class="pcard reveal" data-tilt style="--accent:#ec4899;--accent2:#f59e0b" href="projects/qand-app.html">
+      <div class="pcard-top"><span class="p-lang">Flutter</span><span class="p-stars">★ جدید</span><span class="p-emoji">🍰</span></div>
+      <div class="p-body"><h3>قنادی قند <small>qand-app</small></h3><p>اپ سفارش قنادی با فلاتر و سوپابیس؛ سفارش کیک، پرداخت کارت‌به‌کارت و پنل مدیر.</p>
+      <div class="p-tags"><span class="tag">فلاتر</span><span class="tag">Supabase</span><span class="tag">اندروید ۷ تا ۱۷</span></div>
+      <div class="p-foot"><span class="open">ورود به صفحه پروژه ←</span><span class="gh">GitHub ↗</span></div></div>
+    </a>
+
+  </div>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:rgba(255,255,255,.015);border-top:1px solid rgba(255,255,255,.07);border-bottom:1px solid rgba(255,255,255,.07)">
+<div class="wrap about">
+  <div class="about-card reveal">
+    <span class="eyebrow">👋 درباره من</span>
+    <h2 style="font-size:2.4rem;font-weight:900">الوند کد</h2>
+    <p style="color:var(--mut);margin-top:12px">توسعه‌دهنده نرم‌افزار، عاشق ابزارهای کاربردی و متن‌باز. تمرکزم پایتون، امنیت اندروید، شبکه و اپ‌های واقعی است که مردم هر روز استفاده می‌کنند — از گیم‌نت محل تا قنادی.</p>
+    <div style="display:flex;gap:10px;margin-top:20px;flex-wrap:wrap">
+      <a class="btn btn-p" href="https://github.com/Alvandcode" target="_blank">دنبال کردن در گیت‌هاب</a>
+      <a class="btn btn-g" href="https://t.me/a_c_official" target="_blank">کانال تلگرام</a>
+    </div>
+  </div>
+  <div class="timeline">
+    <div class="tl reveal"><b>🛡️ امنیت و حریم خصوصی</b><span>اسکنر اندروید، پاک‌کننده EXIF و استگانوگرافی AES — ابزارهایی که از کاربر محافظت می‌کنند.</span></div>
+    <div class="tl reveal"><b>⚡ شبکه و عملکرد</b><span>بنچمارک DNS با موتور async، پشتیبانی UDP/DoH/DoT و سیستم امتیازدهی هوشمند.</span></div>
+    <div class="tl reveal"><b>🔍 پردازش هوشمند</b><span>OCR فارسی/انگلیسی، استخراج متن PDF و تبدیل گفتار به نوشتار روی دسکتاپ و موبایل.</span></div>
+    <div class="tl reveal"><b>🎮 محصول واقعی برای کسب‌وکار</b><span>گیم‌نت پرو (ویندوز + اندروید) و اپ قنادی قند — محصول‌هایی که پول درمی‌آورند، نه فقط دمو.</span></div>
+    <div class="tl reveal"><b>☁️ بک‌اند و داکر</b><span>سرویس Spring Boot برای OCR رسید؛ اجرای تک‌دستوری با Docker و دیتابیس H2.</span></div>
+  </div>
+</div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+<div class="wrap">
+  <div class="sec-head reveal"><div><span class="eyebrow">🧠 تخصص‌ها</span><h2>زرادخانه <span class="grad">تکنولوژی</span></h2></div></div>
+  <div class="skills reveal">
+    <div class="skill"><div class="ic">🐍</div><b>Python</b><small>ابزار، امنیت، OCR</small><div class="bar"><i data-w="95"></i></div></div>
+    <div class="skill"><div class="ic">📱</div><b>Kotlin / Android</b><small>Compose, SAF</small><div class="bar"><i data-w="85"></i></div></div>
+    <div class="skill"><div class="ic">🎯</div><b>Dart / Flutter</b><small>اپ فروشگاهی</small><div class="bar"><i data-w="82"></i></div></div>
+    <div class="skill"><div class="ic">☕</div><b>Java / Spring</b><small>بک‌اند + Docker</small><div class="bar"><i data-w="80"></i></div></div>
+    <div class="skill"><div class="ic">⚡</div><b>JavaScript / Electron</b><small>اپ دسکتاپ</small><div class="bar"><i data-w="86"></i></div></div>
+    <div class="skill"><div class="ic">🌐</div><b>شبکه و DNS</b><small>UDP / DoH / DoT</small><div class="bar"><i data-w="88"></i></div></div>
+    <div class="skill"><div class="ic">🖼️</div><b>پردازش تصویر</b><small>Tesseract, EXIF</small><div class="bar"><i data-w="90"></i></div></div>
+    <div class="skill"><div class="ic">🐳</div><b>Docker و API</b><small>Flask, H2, Supabase</small><div class="bar"><i data-w="78"></i></div></div>
+  </div>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" style="padding-top:20px">
+<div class="wrap">
+  <div class="contact-box reveal"><div class="contact-in">
+    <span class="eyebrow">📬 تماس</span>
+    <h2 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900">بیا با هم چیز خفن بسازیم</h2>
+    <p style="color:var(--mut)">برای همکاری، پیشنهاد فیچر یا گزارش باگ — در دسترسم.</p>
+    <div class="c-grid">
+      <a class="c-card" href="https://github.com/Alvandcode" target="_blank"><div class="ic">🐙</div><b>گیت‌هاب</b><br><small style="color:var(--mut)">github.com/Alvandcode</small></a>
+      <a class="c-card" href="https://t.me/a_c_official" target="_blank"><div class="ic">✈️</div><b>تلگرام</b><br><small style="color:var(--mut)">@a_c_official</small></a>
+      <a class="c-card" href="mailto:Alvandcode@atomicmail.io"><div class="ic">✉️</div><b>ایمیل</b><br><small class="ltr" style="color:var(--mut)">Alvandcode@atomicmail.io</small></a>
+    </div>
+  </div></div>
+</div>
+</section>
+
+<footer>
+<div class="wrap f-row">
+  <a class="logo" href="#home"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b><br><small style="color:var(--mut);font-size:.7rem">© ۱۴۰۴ — ساخته‌شده با ♥ و Three.js</small></span></a>
+  <div class="f-links"><a href="#projects">پروژه‌ها</a><a href="gamenet/">گیم‌نت پرو</a><a href="https://github.com/Alvandcode" target="_blank">گیت‌هاب</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+</div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="assets/js/three-hero.js"></script>
+<script src="assets/js/main.js"></script>
 </body>
 </html>

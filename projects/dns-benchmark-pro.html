@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>بنچمارک DNS پرو | الوند کد</title>
+<meta name="description" content="ابزار تست و مقایسه سرعت DNS با UDP/DoH/DoT، امتیازدهی و گزارش HTML/CSV/JSON.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>:root{--accent:#f59e0b;--accent2:#ef4444}</style>
+</head>
+<body>
+<canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
+<header id="siteHeader"><nav class="nav">
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/dns-benchmark-pro" target="_blank">★ گیت‌هاب پروژه</a>
+</nav></header>
+<div class="wrap">
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<div class="proj-hero"><div>
+<div class="proj-icon">⚡</div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">بنچمارک <span class="grad">DNS پرو</span></h1>
+<p class="sub">بهترین DNS را از نظر سرعت، پایداری و خطا پیدا کن. تست همزمان ده‌ها سرور، محاسبه میانگین / میانه / P95 و Packet Loss، با سیستم امتیازدهی A+ تا F.</p>
+<div class="meta"><span class="pill hot">★ 4 استار</span><span class="pill">Python Async</span><span class="pill">UDP / DoH / DoT</span><span class="pill">MIT</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/dns-benchmark-pro" target="_blank">⬇ دریافت از گیت‌هاب</a></div>
+</div>
+<div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">report.html — preview</span></div>
+<div class="shot-body"><div style="display:flex;flex-direction:column;gap:12px">
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between"><span>🥇 1.1.1.1</span><b style="color:#34d399">96.4 (A+)</b></div>
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between"><span>🥈 8.8.8.8</span><b style="color:#a5b4fc">92.1 (A)</b></div>
+<div style="background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:14px;padding:12px 16px;display:flex;justify-content:space-between"><span>🥉 9.9.9.9</span><b style="color:#fbbf24">88.7 (B)</b></div>
+<p style="color:var(--mut);font-size:.8rem">میانگین • میانه • P95 • Packet Loss — همه در یک گزارش</p>
+</div></div></div></div>
+<section style="padding-top:20px"><h2 class="reveal">✨ قابلیت‌ها</h2>
+<div class="feat-grid">
+<div class="feat reveal"><div class="e">🚀</div><b>تست همزمان</b><p style="color:var(--mut);font-size:.87rem">موتور async برای تست سریع ده‌ها DNS به‌صورت موازی.</p></div>
+<div class="feat reveal"><div class="e">🔌</div><b>UDP + آماده DoH/DoT</b><p style="color:var(--mut);font-size:.87rem">معماری ماژولار برای پروتکل‌های رمزنگاری‌شده.</p></div>
+<div class="feat reveal"><div class="e">📊</div><b>آمار دقیق</b><p style="color:var(--mut);font-size:.87rem">میانگین، میانه، صدک ۹۵ و درصد از دست‌رفتن بسته.</p></div>
+<div class="feat reveal"><div class="e">🏆</div><b>امتیازدهی هوشمند</b><p style="color:var(--mut);font-size:.87rem">رتبه‌بندی A+ تا F برای انتخاب سریع بهترین DNS.</p></div>
+<div class="feat reveal"><div class="e">📁</div><b>خروجی سه‌گانه</b><p style="color:var(--mut);font-size:.87rem">CSV برای اکسل، JSON برای برنامه‌نویس، HTML برای ارائه.</p></div>
+<div class="feat reveal"><div class="e">🧩</div><b>ساختار تمیز</b><p style="color:var(--mut);font-size:.87rem">ماژول‌های جدا: cli / engine / scoring / exporter / dashboard.</p></div>
+</div></section>
+<section style="padding-top:10px"><h2 class="reveal">🚀 اجرا</h2>
+<div class="steps">
+<div class="step reveal"><b>اجرای ساده</b><div class="code"><button class="cp">کپی</button>python main.py</div></div>
+<div class="step reveal"><b>اجرای پیشرفته</b><div class="code"><button class="cp">کپی</button>python main.py --queries 20 --timeout 3</div></div>
+<div class="step reveal"><b>فایل‌های خروجی</b><div class="code"><button class="cp">کپی</button><span class="cmt"># بعد از اجرا ساخته می‌شوند:</span><br>results/result.csv<br>results/result.json<br>results/report.html</div></div>
+</div></section>
+<div class="nextprev">
+<a class="np" href="android-security-scanner.html"><small>← پروژه قبلی</small><b>🛡️ اسکنر امنیت اندروید</b></a>
+<a class="np" style="text-align:left" href="ocr-stt-tool.html"><small>پروژه بعدی →</small><b>🔍 OCR + تبدیل گفتار</b></a>
+</div></div>
+<footer style="margin-top:60px"><div class="wrap f-row">
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/dns-benchmark-pro" target="_blank">گیت‌هاب پروژه</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+</body></html>

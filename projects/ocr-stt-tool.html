@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>OCR + تبدیل گفتار | الوند کد</title>
+<meta name="description" content="ابزار چندسکویی استخراج متن از تصویر و PDF و تبدیل گفتار به نوشتار با پایتون و Kivy.">
+<link rel="stylesheet" href="../assets/css/style.css">
+<style>:root{--accent:#06b6d4;--accent2:#14b8a6}</style>
+</head>
+<body>
+<canvas id="bg3d"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div><div id="glow"></div>
+<header id="siteHeader"><nav class="nav">
+<a class="logo" href="../index.html"><span class="logo-mark">A</span><span><b>الوند کد</b><small>ALVANDCODE</small></span></a>
+<div class="links"><a href="../index.html#home">خانه</a><a href="../index.html#projects" class="active">پروژه‌ها</a><a href="../index.html#about">درباره</a><a href="../index.html#contact">تماس</a></div>
+<a class="btn btn-p" style="padding:10px 22px" href="https://github.com/Alvandcode/ocr-stt-tool" target="_blank">★ گیت‌هاب پروژه</a>
+</nav></header>
+<div class="wrap">
+<a class="back" href="../index.html#projects" style="margin-top:110px;display:inline-flex">→ بازگشت به همه پروژه‌ها</a>
+<div class="proj-hero"><div>
+<div class="proj-icon">🔍</div>
+<h1 style="font-size:clamp(2rem,4.5vw,3.2rem);font-weight:900;margin-top:20px">ابزار <span class="grad">OCR + گفتار به متن</span></h1>
+<p class="sub">یک ابزار چندسکویی (Windows / macOS / Linux / Android / iOS): استخراج متن از عکس و PDF با Tesseract، تبدیل صدا به متن فارسی و انگلیسی، با رابط CLI و اپ گرافیکی Kivy.</p>
+<div class="meta"><span class="pill hot">★ 4 استار</span><span class="pill">Python</span><span class="pill">Tesseract</span><span class="pill">Kivy</span><span class="pill">MIT</span></div>
+<div style="display:flex;gap:12px;flex-wrap:wrap"><a class="btn btn-p" href="https://github.com/Alvandcode/ocr-stt-tool" target="_blank">⬇ دریافت از گیت‌هاب</a></div>
+</div>
+<div class="shot" data-tilt><div class="shot-bar"><span class="td r"></span><span class="td y"></span><span class="td g"></span><span style="font-size:.75rem;color:var(--mut)">cli — demo</span></div>
+<div class="shot-body term-body"><div><span class="t-g">$</span> python -m app.cli image sample.png</div><div class="t-g">✓</div><div>سلام دنیا! این متن از تصویر استخراج شد.</div><div style="margin-top:10px"><span class="t-g">$</span> python -m app.cli audio voice.wav --lang fa-IR</div><div class="t-b">→ متن فارسی پیاده‌سازی شد ✓</div><div style="margin-top:10px"><span class="t-g">$</span> python -m app.gui_kivy</div><div class="t-m"># رابط گرافیکی باز می‌شود…</div></div></div></div>
+<section style="padding-top:20px"><h2 class="reveal">✨ قابلیت‌ها</h2>
+<div class="feat-grid">
+<div class="feat reveal"><div class="e">🖼️</div><b>OCR تصویر</b><p style="color:var(--mut);font-size:.87rem">پشتیبانی از فارسی و انگلیسی با موتور Tesseract.</p></div>
+<div class="feat reveal"><div class="e">📄</div><b>استخراج از PDF</b><p style="color:var(--mut);font-size:.87rem">خواندن متن PDFهای اسکن‌شده و متنی.</p></div>
+<div class="feat reveal"><div class="e">🎙️</div><b>گفتار به متن</b><p style="color:var(--mut);font-size:.87rem">پشتیبانی از fa-IR و en-US (نیازمند اینترنت).</p></div>
+<div class="feat reveal"><div class="e">💻</div><b>دو رابط</b><p style="color:var(--mut);font-size:.87rem">CLI سریع برای توسعه‌دهنده + GUI با Kivy برای همه.</p></div>
+<div class="feat reveal"><div class="e">📱</div><b>موبایل</b><p style="color:var(--mut);font-size:.87rem">بیلد APK با Buildozer و بیلد iOS با Kivy-iOS.</p></div>
+<div class="feat reveal"><div class="e">🧩</div><b>ماژولار</b><p style="color:var(--mut);font-size:.87rem">ساختار core جدا برای توسعه آسان قابلیت جدید.</p></div>
+</div></section>
+<section style="padding-top:10px"><h2 class="reveal">🚀 نصب و اجرا</h2>
+<div class="steps">
+<div class="step reveal"><b>۱. نصب وابستگی‌ها + Tesseract</b><div class="code"><button class="cp">کپی</button>pip install -r requirements.txt<br><span class="cmt"># linux:</span> sudo apt install tesseract-ocr tesseract-ocr-fas<br><span class="cmt"># mac:</span> brew install tesseract</div></div>
+<div class="step reveal"><b>۲. اجرای CLI</b><div class="code"><button class="cp">کپی</button>python -m app.cli image examples/sample.png<br>python -m app.cli pdf examples/sample.pdf<br>python -m app.cli audio examples/sample.wav --lang fa-IR</div></div>
+<div class="step reveal"><b>۳. بیلد موبایل / دسکتاپ</b><div class="code"><button class="cp">کپی</button><span class="cmt"># android:</span> buildozer -v android debug<br><span class="cmt"># desktop:</span> pyinstaller app/cli.py --onefile</div></div>
+</div></section>
+<div class="nextprev">
+<a class="np" href="dns-benchmark-pro.html"><small>← پروژه قبلی</small><b>⚡ بنچمارک DNS</b></a>
+<a class="np" style="text-align:left" href="image-metadata-cleaner.html"><small>پروژه بعدی →</small><b>🧹 پاک‌کننده متادیتا</b></a>
+</div></div>
+<footer style="margin-top:60px"><div class="wrap f-row">
+<a class="logo" href="../index.html"><span class="logo-mark" style="width:36px;height:36px;font-size:1.2rem">A</span><span><b>الوند کد</b></span></a>
+<div class="f-links"><a href="../index.html#projects">پروژه‌ها</a><a href="https://github.com/Alvandcode/ocr-stt-tool" target="_blank">گیت‌هاب پروژه</a><a href="https://t.me/a_c_official" target="_blank">تلگرام</a></div>
+</div></footer>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="../assets/js/three-hero.js"></script><script src="../assets/js/main.js"></script>
+</body></html>
