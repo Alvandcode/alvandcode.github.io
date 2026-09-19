@@ -1,45 +1,53 @@
-# alvandcode.github.io
+# alvandcode.github.io — Personal Portfolio
 
-[![Stars](https://img.shields.io/github/stars/Alvandcode/alvandcode.github.io?style=flat-square)](https://github.com/Alvandcode/alvandcode.github.io/stargazers) [![License](https://img.shields.io/github/license/Alvandcode/alvandcode.github.io?style=flat-square)](./LICENSE) [![Last commit](https://img.shields.io/github/last-commit/Alvandcode/alvandcode.github.io?style=flat-square)](https://github.com/Alvandcode/alvandcode.github.io/commits)
+[![Pages](https://img.shields.io/badge/GitHub_Pages-live-green)](https://alvandcode.github.io) [![License](https://img.shields.io/github/license/Alvandcode/alvandcode.github.io)](./LICENSE)
 
-> My personal portfolio and project showcase — Alvandcode.
+> My personal portfolio and projects showcase — Alvandcode. Static site, no build step.
 
 <div dir="rtl">
 
-## وب‌سایت شخصی الوندکد
+## پورتفولیوی الوند
 
-وب‌سایت شخصی و نمونه‌کارهای من — الوندکد.
+وب‌سایت شخصی و ویترین پروژه‌ها. سایت استاتیک است و نیاز به بیلد ندارد؛ کافی است `index.html` را باز کنید یا روی GitHub Pages ببینید: https://alvandcode.github.io
 
 </div>
 
 ---
 
-این ریپو سورس وب‌سایت شخصی Alvandcode است که روی GitHub Pages منتشر می‌شود. ساختار پروژه شامل یک صفحه اصلی (index.html) و فایل‌های استاتیک برای استایل و اسکریپت‌هاست. هدف سایت نمایش پروژه‌ها، لینک‌ها و اطلاعات تماس است.
+## View locally (no build needed)
 
-بخش‌ها
-- صفحه اصلی — معرفی کوتاه و لینک‌های مهم  
-- استایل‌ها — فایل‌های CSS برای ظاهر سایت  
-- اسکریپت‌ها — رفتارهای ساده فرانت‌اند  
+```bash
+git clone https://github.com/Alvandcode/alvandcode.github.io.git
+cd alvandcode.github.io
+# just open index.html in a browser, or:
+npx serve . -p 8080
+```
 
-اجرا
-فقط ریپو را کلون کنید و index.html را در مرورگر باز کنید.
+Live: https://alvandcode.github.io
 
-دیپلوی
-GitHub Pages با برنچ main فعال است و سایت روی آدرس زیر در دسترس می‌باشد:  
-https://alvandcode.github.io
+## Structure
 
----
+```
+index.html      landing + projects grid
+assets/         css / js / images
+gamenet/        gamenet demo page
+projects/       per-project pages (dns-benchmark-pro, ocr-stt-tool, ...)
+404.html        custom not-found
+sitemap.xml + robots.txt   SEO
+sw.js + manifest  PWA (offline cache)
+```
 
-## Contributing / مشارکت
+## Add a new project page
 
-- EN: Issues and Pull Requests are welcome. Please see `CONTRIBUTING.md`.
-- FA: برای گزارش مشکل یا پیشنهاد قابلیت جدید، لطفا ایشو یا پول‌ریکوئست ثبت کنید.
+1. Copy an existing folder under `projects/` as template.
+2. Add a card in `index.html` linking to it.
+3. Update `sitemap.xml`.
+4. Push to `main` — GitHub Pages redeploys automatically (Settings → Pages → Deploy from branch `main` / root).
 
-## License / لایسنس
+## Prerequisites
+
+None — static HTML/CSS/JS. Optional: any static server (`npx serve`, `python -m http.server`) for PWA/service-worker testing.
+
+## License
 
 MIT — see [LICENSE](./LICENSE).
-
-## Contact / ارتباط
-
-- Telegram: https://t.me/a_c_official
-- Website: https://alvandcode.github.io
