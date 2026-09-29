@@ -4,16 +4,17 @@
     if(typeof THREE==='undefined') return;
     var canvas=document.getElementById('bg3d');
     if(!canvas) return;
-    var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:true});
-    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
+    var renderer=new THREE.WebGLRenderer({canvas:canvas,alpha:true,antialias:false,powerPreference:"low-power"});
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.5));
     renderer.setSize(innerWidth,innerHeight);
     var scene=new THREE.Scene();
     scene.fog=new THREE.FogExp2(0x06060d,0.028);
     var cam=new THREE.PerspectiveCamera(60,innerWidth/innerHeight,.1,200);
     cam.position.set(0,0,14);
 
-    // stars
-    var N=900,pos=new Float32Array(N*3),col=new Float32Array(N*3);
+    // stars — fewer on mobile for GPU/battery
+    var isMobile=innerWidth<768;
+    var N=isMobile?400:900,pos=new Float32Array(N*3),col=new Float32Array(N*3);
     var palette=[[0.39,0.4,0.95],[0.66,0.33,0.97],[0.13,0.83,0.93],[0.2,0.9,0.6]];
     for(var i=0;i<N;i++){
       pos[i*3]=(Math.random()-.5)*70;pos[i*3+1]=(Math.random()-.5)*44;pos[i*3+2]=(Math.random()-.5)*50-6;
@@ -43,9 +44,10 @@
     var ring2=new THREE.Mesh(new THREE.TorusGeometry(4.3,.015,8,120),new THREE.MeshBasicMaterial({color:0xe879f9,transparent:true,opacity:.35}));
     ring2.rotation.x=Math.PI/1.7;ring2.rotation.y=.5;group.add(ring2);
 
-    // floating cubes
+    // floating cubes — fewer on mobile
     var cubes=[];
-    for(var j=0;j<14;j++){
+    var NCUBES=isMobile?7:14;
+    for(var j=0;j<NCUBES;j++){
       var s=.18+Math.random()*.4;
       var m=new THREE.Mesh(new THREE.BoxGeometry(s,s,s),
         new THREE.MeshBasicMaterial({color:j%2?0x6366f1:0x22d3ee,wireframe:true,transparent:true,opacity:.5}));
@@ -60,9 +62,24 @@
     addEventListener('resize',function(){cam.aspect=innerWidth/innerHeight;cam.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight);});
     if(innerWidth<1020){group.position.set(0,-4.5,-4);group.scale.setScalar(.8);}
 
-    var t=0;
-    (function anim(){
-      requestAnimationFrame(anim);t+=.008;
+    var t=0,raf=0,visible=true;
+    try{
+      document.addEventListener("visibilitychange",function(){
+        visible=!document.hidden;
+        if(visible&&!raf)anim();
+      });
+      if("IntersectionObserver" in window&&document.getElementById("home")){
+        new IntersectionObserver(function(es){
+          var v=es[0]&&es[0].isIntersecting;
+          if(v&&!raf&&visible)anim();
+        },{threshold:0}).observe(document.getElementById("home"));
+      }
+    }catch(e){}
+    function anim(){
+      raf=requestAnimationFrame(anim);
+      if(!visible){cancelAnimationFrame(raf);raf=0;return;}
+      if(document.hidden){cancelAnimationFrame(raf);raf=0;return;}
+      t+=.008;
       ico.rotation.y+=.0035;ico.rotation.x+=.0012;
       inner.rotation.y-=.005;inner.rotation.x+=.002;
       ring1.rotation.z+=.003;ring2.rotation.z-=.002;
@@ -73,6 +90,7 @@
       cam.position.y+=(-my*1.4-cam.position.y)*.04;
       cam.lookAt(0,0,0);
       renderer.render(scene,cam);
-    })();
+    }
+    anim();
   }catch(e){/* silent fallback to CSS orbs */}
 })();

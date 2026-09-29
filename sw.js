@@ -3,18 +3,17 @@
    cache only as offline fallback). Static assets are STALE-WHILE-
    REVALIDATE (instant repeat visits, refreshed in background).
    Bump V after big asset changes to force a clean cache. */
-const V = "alvand-v1";
+const V = "alvand-v2";
 const CORE = [
   "/",
   "/index.html",
-  "/assets/css/style.css",
-  "/assets/css/theme.css",
+  "/assets/css/app.css",
   "/assets/js/main.js",
   "/assets/js/lang.js",
-  "/assets/js/i18n1.js",
-  "/assets/js/i18n2.js",
-  "/assets/js/i18n3.js",
-  "/assets/js/github.js"
+  "/assets/js/i18n-fa.js",
+  "/assets/js/github.js",
+  "/assets/img/logo-256.webp",
+  "/assets/img/favicon-64.png"
 ];
 
 self.addEventListener("install", (e) => {

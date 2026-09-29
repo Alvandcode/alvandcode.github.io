@@ -80,10 +80,15 @@
 
   function load(){
     if (!document.getElementById("auto-grid")) return;
+    /* cached repos render instantly (no network) */
     try {
       var c = JSON.parse(localStorage.getItem(CACHE_KEY) || "null");
       if (c && (Date.now() - c.ts) < TTL && c.data){ render(c.data); return; }
     } catch(e){}
+    /* fresh network fetch only when #fresh scrolls near viewport */
+    var started=false;
+    function fetchNow(){
+      if(started)return;started=true;
     fetch("https://api.github.com/users/" + USER + "/repos?per_page=100&sort=pushed")
       .then(function(res){ if (!res.ok) throw 0; return res.json(); })
       .then(function(data){
@@ -91,6 +96,19 @@
         render(data);
       })
       .catch(fail);
+    }
+    try{
+      var el=document.getElementById("fresh")||document.getElementById("auto-grid");
+      if("IntersectionObserver" in window&&el){
+        var io=new IntersectionObserver(function(es){
+          if(es[0]&&es[0].isIntersecting){io.disconnect();fetchNow();}
+        },{rootMargin:"600px"});
+        io.observe(el);
+        return;
+      }
+    }catch(e){}
+    if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",fetchNow);
+    else fetchNow();
   }
   if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", load);
   else load();

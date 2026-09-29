@@ -9,22 +9,27 @@
 <meta property="og:site_name" content="Alvandcode">
 <meta property="og:title" content="Alvandcode | الوند کد">
 <meta property="og:description" content="Developer portfolio: security tools, networking, OCR and mobile apps.">
-<meta property="og:image" content="https://alvandcode.github.io/assets/img/logo.png">
+<meta property="og:image" content="https://alvandcode.github.io/assets/img/logo-512.webp">
 <title>404 | الوند کد</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;800;900&display=swap">
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/theme.css">
-<link rel="icon" type="image/png" href="assets/img/favicon.png">
-<link rel="apple-touch-icon" href="assets/img/logo.png">
+<link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+<link rel="preconnect" href="https://api.github.com">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;800&display=swap" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;800&display=swap"></noscript>
+<link rel="preload" as="style" href="assets/css/app.css">
+<link rel="stylesheet" href="assets/css/app.css">
+<link rel="icon" type="image/png" sizes="64x64" href="assets/img/favicon-64.png">
+<link rel="icon" type="image/webp" sizes="256x256" href="assets/img/logo-256.webp">
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-180.png">
 </head>
 <body>
 <a class="skip" href="#maincontent" data-i18n="common.skip">skip</a>
 <div id="veil" data-mode="rise"><div class="veil-sun"></div></div>
 <canvas id="bg3d" aria-hidden="true"></canvas><div class="bg-grid"></div><div class="orb orb1"></div><div class="orb orb2"></div>
 <header id="siteHeader"><nav class="nav">
-<a class="logo" href="index.html"><img class="logo-img" src="assets/img/logo.png" alt="Alvandcode"><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
+<a class="logo" href="index.html"><img class="logo-img" src="assets/img/logo-256.webp" onerror="this.onerror=null;this.src='assets/img/logo-96.png'" alt="Alvandcode" width="40" height="40" fetchpriority="high" decoding="async"><span><b data-i18n="home.f_name">الوند کد</b><small>ALVANDCODE</small></span></a>
 <div class="nav-tools">
 <select class="lang-sel" aria-label="language"></select>
 <button class="theme-btn" data-i18n-attr="title:common.theme" title="تغییر تم">☀️</button>
@@ -65,9 +70,7 @@ function paint404(){
 window.addEventListener("langchange", paint404);
 window.addEventListener("DOMContentLoaded", function(){ setTimeout(paint404, 50); });
 </script>
-<script src="assets/js/i18n1.js"></script>
-<script src="assets/js/i18n2.js"></script>
-<script src="assets/js/i18n3.js"></script>
-<script src="assets/js/lang.js"></script>
-<script src="assets/js/main.js"></script>
+<script defer src="assets/js/i18n-fa.js"></script>
+<script defer src="assets/js/lang.js"></script>
+<script defer src="assets/js/main.js"></script>
 </body></html>
