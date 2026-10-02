@@ -223,3 +223,25 @@ footer{border-top:1px solid var(--bd);padding:44px 0 30px;background:rgba(5,5,12
 .skip{position:fixed;top:-70px;right:16px;z-index:300;background:linear-gradient(135deg,#6366f1,#a855f7);color:#fff;font-weight:800;font-size:.85rem;padding:10px 20px;border-radius:12px;transition:top .25s;text-decoration:none}
 .skip:focus{top:12px;color:#fff}
 html[dir="ltr"] .skip{right:auto;left:16px}
+
+/* ===== generic project page (project.html?repo=...): single-column centered hero ===== */
+/* the generic page reuses .proj-hero with ONE child, so force 1 column (no empty track) */
+#gen-wrap{max-width:980px;margin-inline:auto}
+#gen-wrap .proj-hero{grid-template-columns:minmax(0,1fr);min-height:0;gap:26px;justify-items:center;text-align:center;padding-top:calc(var(--nav-h) + 36px)}
+#gen-wrap .proj-hero>div{min-width:0;width:100%}
+#gen-wrap .proj-icon{margin-inline:auto}
+#gen-wrap .hero-stats{justify-content:center}
+#gen-wrap .hero-stats .stat{min-width:0;flex:1 1 140px}
+#gen-wrap .proj-hero>div>div[style]{justify-content:center}
+#gen-title{overflow-wrap:anywhere}
+/* grid blowout guard: long unbreakable strings (clone URL, README links) must not widen tracks */
+.proj-hero>*,.hero>*,.about>*{min-width:0}
+.code{max-width:100%}
+#gen-clone{display:inline-block;max-width:100%;overflow-wrap:anywhere}
+.md-body{overflow-wrap:anywhere}
+.md-body>*{max-width:100%}
+.md-body img{height:auto}
+@media(max-width:680px){
+  #gen-wrap .hero-stats .stat{flex:1 1 100px;padding:10px 8px}
+  #gen-wrap .proj-hero{padding-top:calc(var(--nav-h) + 20px)}
+}
