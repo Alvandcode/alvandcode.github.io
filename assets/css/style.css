@@ -1,5 +1,6 @@
 /* Alvandcode v2 — Dark 3D Glass Theme (RTL) */
-/* font: loaded via <link> in <head> (faster than @import) — Vazirmatn 400/700/800/900 */
+/* font: Estedad variable (OFL-1.1, self-hosted in assets/fonts) — Persian/Latin UI font, weights 100-900 */
+@font-face{font-family:'Estedad';font-style:normal;font-weight:100 900;font-display:swap;src:url(../fonts/estedad-var.woff2) format('woff2')}
 :root{
   --bg:#06060d; --bg2:#0b0b18; --card:rgba(255,255,255,.055);
   --bd:rgba(255,255,255,.09); --txt:#e8eaf2; --mut:#9aa0b8;
@@ -9,7 +10,7 @@
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:'Vazirmatn',system-ui,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.9}
+body{font-family:'Estedad',system-ui,'Segoe UI',Tahoma,Arial,sans-serif;background:var(--bg);color:var(--txt);overflow-x:hidden;line-height:1.9}
 ::selection{background:rgba(99,102,241,.45)}
 ::-webkit-scrollbar{width:10px}::-webkit-scrollbar-track{background:#080810}
 ::-webkit-scrollbar-thumb{background:linear-gradient(180deg,#6366f1,#a855f7);border-radius:99px}
@@ -192,7 +193,7 @@ footer{border-top:1px solid var(--bd);padding:44px 0 30px;background:rgba(5,5,12
 .feat:hover{transform:translateY(-6px);border-color:var(--accent)}
 .feat .e{font-size:1.7rem}
 .code{background:#0a0a16;border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:18px;direction:ltr;text-align:left;font-family:Consolas,monospace;font-size:.82rem;line-height:1.9;overflow-x:auto;margin:14px 0;position:relative}
-.code .cp{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.08);border:1px solid var(--bd);color:#fff;border-radius:10px;padding:4px 12px;font-size:.7rem;cursor:pointer;font-family:'Vazirmatn'}
+.code .cp{position:absolute;top:10px;right:10px;background:rgba(255,255,255,.08);border:1px solid var(--bd);color:#fff;border-radius:10px;padding:4px 12px;font-size:.7rem;cursor:pointer;font-family:inherit}
 .code .cp:hover{background:rgba(99,102,241,.4)}
 .k{color:#e879f9}.s{color:#86efac}.cmt{color:#5b6079}.f{color:#7dd3fc}
 .steps{counter-reset:st;display:flex;flex-direction:column;gap:14px;margin-top:18px}
