@@ -58,10 +58,13 @@
       + '<span class="gh">GitHub ↗</span></div></div></a>';
   }
 
+  var lastData = null;
+
   function render(list){
     var grid = document.getElementById("auto-grid");
     var fresh = document.getElementById("fresh");
     if (!grid) return;
+    lastData = list;
     var fresh2 = list.filter(function(r){
       return !r.fork && CURATED.indexOf((r.name || "").toLowerCase()) < 0;
     }).sort(function(a, b){
@@ -110,6 +113,16 @@
     if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",fetchNow);
     else fetchNow();
   }
-  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", load);
-  else load();
+  /* render only after the active language pack is ready (else footer falls back to Persian),
+     and re-render on every language switch */
+  function start(){
+    try{
+      var l=document.documentElement.getAttribute("data-lang")||"fa";
+      if(window.ensureLang) window.ensureLang(l).then(function(){load();});
+      else load();
+    }catch(e){ load(); }
+  }
+  window.addEventListener("langchange",function(){ if(lastData) render(lastData); });
+  if (document.readyState === "loading") document.addEventListener("DOMContentLoaded", start);
+  else start();
 })();

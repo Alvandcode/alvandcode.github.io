@@ -128,4 +128,32 @@
     ensureLang(l).then(function(ok){applyLang(ok);});
     setTimeout(function(){try{applyLang(document.documentElement.getAttribute("data-lang")||"fa");}catch(e){}},4500);
   })();
+
+  /* idle preload: fetch the other language batches after load so switching is instant.
+     critical path still needs only i18n-fa.js; skipped on data-saver. */
+  (function(){
+    function preload(){
+      try{
+        if(navigator.connection&&navigator.connection.saveData) return;
+        ["i18n1.js","i18n2.js","i18n3.js"].forEach(function(f){
+          if(_loading[f]) return;
+          _loading[f]=new Promise(function(res){
+            var sc=document.createElement("script");
+            sc.src=assetPrefix()+f;sc.defer=true;
+            sc.onload=function(){res();};sc.onerror=function(){res();};
+            document.head.appendChild(sc);
+            setTimeout(res,8000);
+          });
+        });
+      }catch(e){}
+    }
+    function schedule(){
+      try{
+        if("requestIdleCallback" in window) requestIdleCallback(preload,{timeout:8000});
+        else setTimeout(preload,3000);
+      }catch(e){ setTimeout(preload,3000); }
+    }
+    if(document.readyState==="complete") schedule();
+    else window.addEventListener("load",schedule);
+  })();
 })();
