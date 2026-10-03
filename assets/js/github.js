@@ -4,7 +4,7 @@
   var USER = "Alvandcode";
   var CURATED = ["android-security-scanner","dns-benchmark-pro","ocr-stt-tool",
     "image-metadata-cleaner","receiptvision-core","stegasuite",
-    "gamenet-manager","gamenet-windows-pro","qand-app","alvandcode.github.io"];
+    "gamenet-manager","gamenet-windows-pro","qand-app","alvandcode.github.io","booka","alvand-player","ghandoon","androidsecurityscanner","stegasuite-windows","alvandcode"];
   var LANG_STYLE = {
     "Python": ["🐍","#22c55e","#06b6d4"], "Kotlin": ["🕵️","#a855f7","#ec4899"],
     "Dart": ["🎯","#06b6d4","#3b82f6"], "Java": ["☕","#f59e0b","#ef4444"],
