@@ -3,7 +3,7 @@
    cache only as offline fallback). Static assets are STALE-WHILE-
    REVALIDATE (instant repeat visits, refreshed in background).
    Bump V after big asset changes to force a clean cache. */
-const V = "alvand-v3";
+const V = "alvand-v4";
 const CORE = [
   "/",
   "/index.html",
